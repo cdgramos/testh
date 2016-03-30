@@ -1,16 +1,12 @@
-<<<<<<< HEAD
 /* cldoc:begin-category(rng.h)
 * rng.h defines general memory, time, sort and system functions.
 */
 
-=======
->>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0
 #ifndef __TESTH_UTILITIES__
 #define __TESTH_UTILITIES__
 
 #include <time.h>
 
-<<<<<<< HEAD
 /* util_MemMalloc Function.
 * @num number of bytes to allocate.
 *
@@ -39,12 +35,6 @@ void* util_MemRealloc (void *p, size_t num);
 *
 * util_MemFree free a memory block.
 */
-=======
-
-void* util_MemMalloc (size_t num);
-void* util_MemCalloc (size_t num, size_t size);
-void* util_MemRealloc (void *p, size_t num);
->>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0
 void* util_MemFree (void *p);
 
 void util_MemWr (long int B);
@@ -53,7 +43,6 @@ void util_TimeIt (clock_t *c);
 void util_TimeWr (clock_t *start);
 void util_TimeReset (clock_t *c);
 
-<<<<<<< HEAD
 /* util_Copy Function.
 * @v origin memory block.
 * @v2 destin memory block.
@@ -95,13 +84,3 @@ char* util_GetCwd ();
 #endif /* __TESTH_UTILITIES__ */
 
 /* cldoc:end-category(util.h) */
-=======
-void util_Copy (double *v, double *v2, int size);
-void util_BubbleSort (double *v, int size);
-
-char* util_GetHostname ();
-char* util_GetUsername ();
-char* util_GetCwd ();
-
-#endif
->>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0

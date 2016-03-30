@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 /* cldoc:begin-category(stat.h) 
 * stat.h provides statistical functions
 */
 
-=======
->>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0
 #ifndef __TESTH_STATISTICS__
 #define __TESTH_STATISTICS__
 
@@ -30,10 +27,6 @@ void stat_Autocorrelation (proc_Process *pr, int kmin, int kmax, double h);
 void stat_GOFKolmogorovSmirnov (proc_Points *pt, dist d);
 void stat_GOFChiSquare (proc_Points *pt, dist d);
 
-<<<<<<< HEAD
 #endif /* __TESTH_STATISTICS__ */
 
 /* cldoc:end-category(stat.h) */
-=======
-#endif
->>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0

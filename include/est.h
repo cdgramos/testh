@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 /* cldoc:begin-category(est.h) 
 * est.h provides estimators of the hurst parameter
 */
 
-=======
->>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0
 #ifndef __TESTH_ESTIMATORS__
 #define __TESTH_ESTIMATORS__
 
@@ -20,7 +17,6 @@ enum TestHEstimator {
 typedef enum TestHEstimator est;
 
 
-<<<<<<< HEAD
 /* est_RescaledRangeStatistics Function.
  * @pr is a pointer to a given process.
  *
@@ -38,19 +34,10 @@ double est_RescaledRangeStatistics (proc_Process *pr);
 double est_VarianceTime (proc_Process *pr);
 
 
-=======
-double est_RescaledRangeStatistics (proc_Process *pr);
-
-double est_VarianceTime (proc_Process *pr);
->>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0
 void est_AbsoluteMomentsTime (proc_Process *pr, int mom);
 
 void est_EmbeddedBranchingProcess (proc_Process *pr, int K);
 
-<<<<<<< HEAD
 #endif /* __TESTH_ESTIMATORS__ */
 
 /* cldoc:end-category(est.h) */
-=======
-#endif
->>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0

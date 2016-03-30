@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 /* cldoc:begin-category(proc.h) 
 * proc.h provides interfaces to manipulate processes
 */
 
-=======
->>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0
 #ifndef __TESTH_PROCESS__
 #define __TESTH_PROCESS__
 
@@ -100,10 +97,6 @@ void proc_PrintHeaderScales (proc_ScalesConfig *conf);
 long int proc_SizeOfProcess (proc_Process *pr);
 
 
-<<<<<<< HEAD
 #endif /* __TESTH_PROCESS__ */
 
 /* cldoc:end-category(proc.h) */
-=======
-#endif
->>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0

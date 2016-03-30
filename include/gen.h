@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 /* cldoc:begin-category(gen.h) 
 * gen.h provides generators of self-similar sequences
 */
 
-=======
->>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0
 #ifndef __TESTH_GENERATORS__
 #define __TESTH_GENERATORS__
 
@@ -59,10 +56,6 @@ proc_Process* gen_SimpleSelfSimilarProcessGenerator ();
 proc_Process* gen_Hosking (int N, double h, tosig sig);
 proc_Process* gen_Paxson  (int N, double h, tosig sig);
 
-<<<<<<< HEAD
 #endif /* __TESTH_GENERATORS__ */
 
 /* cldoc:end-category(gen.h) */
-=======
-#endif
->>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0
