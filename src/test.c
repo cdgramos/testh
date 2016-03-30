@@ -157,7 +157,6 @@ int main (int argc, char *argv[]) {
 	TestHEstWrToFile = OFF;
 
 	io_PrintInit ("make; make run", argv[0]);
-	printf("\n---1---\n");scanf("%d",&tp);
 	// io_PrintTestH ();
 
 	proc_Process *pr = NULL;
@@ -186,7 +185,6 @@ int main (int argc, char *argv[]) {
 
 	 conf = proc_CreateScalesConfig (TestH_INC, 4, 10, 2);
 	// conf = proc_CreateScalesConfig (TestH_POW, 7, 11, 2);
-	printf("\n---2---\n");scanf("%d",&tp);
 
 	// proc_CreateScales (pr, conf);
 	// proc_CreateScalesTime (pr, TMIN_SCALE, TMAX_SCALE, TMULTIPLIER);
@@ -200,16 +198,13 @@ int main (int argc, char *argv[]) {
 	// est_RescaledRangeStatistics (pr);
 	
 	batt_Generator (TestH_fBmSGA, 10e5, 2, 0.5, 0.99, 0.05, conf);
-	printf("\n---3---\n");scanf("%d",&tp);
 	// stat_AutocorrelationFunction (pr, 1, 40, H);
 
 	// util_MemWr (proc_SizeOfProcess (pr));
 	// proc_DeleteScales (pr);
 	proc_DeleteProcess (pr);
-	printf("\n---4---\n");scanf("%d",&tp);
 
 	io_PrintDone ();
-	printf("\n---5---\n");scanf("%d",&tp);
 	return EXIT_SUCCESS;
 }
 #endif
