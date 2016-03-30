@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 /* cldoc:begin-category(reg.h)
 * reg.h defines regression analysis functions and data types.
 */
 
+=======
+>>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0
 #ifndef __TESTH_REGRESSION__
 #define __TESTH_REGRESSION__
 
@@ -10,6 +13,7 @@ typedef struct {
 	double b;
 } reg_Linear;
 
+<<<<<<< HEAD
 /* reg_CoefficientOfDetermination Function.
  * @y is the pointer to the first data series. 
  * @x is the pointer to the second data series.
@@ -29,10 +33,18 @@ double reg_CoefficientOfDetermination (double *y, double *x, int n);
  * reg_LeastSquareMeans calculates the overall solution that minimizes the sum of the squares of the errors.
  * @return returns the linear regression.
 */
+=======
+double reg_CoefficientOfDetermination (double *y, double *x, int n);
+
+>>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0
 reg_Linear* reg_LeastSquareMeans (double *y, double *x, int n, int print);
 
 
 
+<<<<<<< HEAD
 #endif /* __TESTH_REGRESSION__ */
 
 /* cldoc:end-category(reg.h) */
+=======
+#endif
+>>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0

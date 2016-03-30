@@ -44,8 +44,12 @@ void* util_MemMalloc (
 		io_PrintErr (errno, "malloc failed in"
 			" util_MemMalloc");
 	return p;
+<<<<<<< HEAD
 }
 
+=======
+}
+>>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0
 void* util_MemCalloc (
 	size_t num,
 	size_t size)
@@ -74,8 +78,12 @@ void* util_MemRealloc (
 		io_PrintErr (errno, "realloc failed in"
 			" util_MemRealloc");
 	return p;
+<<<<<<< HEAD
 }
 
+=======
+}
+>>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0
 void* util_MemFree (
 	void *p)
 {
@@ -90,8 +98,12 @@ static double util_MemMB (
 	long int B)
 {
 	return (double) B / (1024 * 1024);
+<<<<<<< HEAD
 }
 
+=======
+}
+>>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0
 void util_MemWr (B)
 	long int B;
 {
@@ -143,7 +155,11 @@ void util_Copy (
 	double 	*v,
 	double	*v2,
 	int 	size)
+<<<<<<< HEAD
 {
+=======
+{	
+>>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0
 	if (v == NULL || v2 != NULL || size <= 0)
 		io_PrintError (ERR, "invalid parameters in"
 			" util_Copy");
@@ -155,7 +171,11 @@ void util_Copy (
 }
 
 void util_BubbleSort (
+<<<<<<< HEAD
 	double 	*v,
+=======
+	double 	*v, 
+>>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0
 	int 	size)
 {
 	if (v == NULL || size <= 0)
@@ -176,7 +196,11 @@ void util_BubbleSort (
 }
 
 
+<<<<<<< HEAD
 char* util_GetHostname ()
+=======
+char* util_GetHostname () 
+>>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0
 {
 	errno = 0;
 	char *host = (char*) malloc (HOST_NAME_MAX * sizeof (char));
@@ -189,14 +213,22 @@ char* util_GetHostname ()
 		host = NULL;
 	}
 // #else
+<<<<<<< HEAD
 // getenv
+=======
+// getenv 
+>>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0
 /* #else
 	io_PrintError (errno, "Unable to determine hostname in"
 			" util_GetHostname");
 #endif */
 	return host;
 }
+<<<<<<< HEAD
 char* util_GetUsername ()
+=======
+char* util_GetUsername () 
+>>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0
 {
 	errno = 0;
 	char *user = NULL;
@@ -210,7 +242,11 @@ char* util_GetUsername ()
 			" util_GetUsername");
 	return user;
 }
+<<<<<<< HEAD
 char* util_GetCwd ()
+=======
+char* util_GetCwd () 
+>>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0
 {
 	errno = 0;
 	char *cwd = (char*) malloc (MAXPATHLEN * sizeof (char));

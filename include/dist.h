@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 /* cldoc:begin-category(dist.h) 
 * dist.h provides probability distribution functionss
 */
 
+=======
+>>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0
 #ifndef __TESTH_DISTRIBUTIONS__
 #define __TESTH_DISTRIBUTIONS__
 
@@ -43,6 +46,10 @@ double* dist_CDFIncremental (proc_Points *pt);
 
 double dist_F (double Rsq, int pt);
 
+<<<<<<< HEAD
 #endif /* __TESTH_DISTRIBUTIONS__ */
 
 /* cldoc:end-category(dist.h) */
+=======
+#endif
+>>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0

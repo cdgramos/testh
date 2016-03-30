@@ -147,7 +147,10 @@ int main (int argc, char *argv[]) {
 
 #if 1
 int main (int argc, char *argv[]) {
+<<<<<<< HEAD
 	int tp = 0;
+=======
+>>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0
 	TestHVerbosity = TestH_HIGH;
 	TestHPrintPlain = OFF;
 	TestHPrintSep = ON;
@@ -183,8 +186,13 @@ int main (int argc, char *argv[]) {
 	// proc_FractionalBrownianMotion (pr);
 	// proc_PrintPoints (pr->points);
 
+<<<<<<< HEAD
 	 conf = proc_CreateScalesConfig (TestH_INC, 4, 10, 2);
 	// conf = proc_CreateScalesConfig (TestH_POW, 7, 11, 2);
+=======
+	// conf = proc_CreateScalesConfig (TestH_INC, 4, 10, 2);
+	conf = proc_CreateScalesConfig (TestH_POW, 7, 11, 2);
+>>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0
 
 	// proc_CreateScales (pr, conf);
 	// proc_CreateScalesTime (pr, TMIN_SCALE, TMAX_SCALE, TMULTIPLIER);
@@ -197,7 +205,12 @@ int main (int argc, char *argv[]) {
 	// est_VarianceTime (pr);
 	// est_RescaledRangeStatistics (pr);
 	
+<<<<<<< HEAD
 	batt_Generator (TestH_fBmSGA, 10e5, 2, 0.5, 0.99, 0.05, conf);
+=======
+	batt_Generator (TestH_fBmSGA, 10e5, 2, 0.50, 0.99, 0.05, conf);
+
+>>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0
 	// stat_AutocorrelationFunction (pr, 1, 40, H);
 
 	// util_MemWr (proc_SizeOfProcess (pr));
