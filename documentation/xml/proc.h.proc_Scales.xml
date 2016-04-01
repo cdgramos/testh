@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct id="proc.h::proc_Scales" name="proc_Scales" typedef="yes" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <field id="proc.h::proc_Scales::scales" name="scales">
+    <type name="proc_Points" qualifier="*" ref="proc.h::proc_Points#proc.h::proc_Points" />
+  </field>
+  <field id="proc.h::proc_Scales::conf" name="conf">
+    <type name="proc_ScalesConfig" qualifier="*" ref="proc.h::proc_ScalesConfig#proc.h::proc_ScalesConfig" />
+  </field>
+  <function id="proc_CheckScales" name="proc_CheckScales">
+    <return>
+      <type builtin="yes" name="int" />
+    </return>
+    <argument id="proc_CheckScales::sl" name="sl">
+      <type name="proc_Scales" qualifier="*" ref="proc.h::proc_Scales#proc.h::proc_Scales" />
+    </argument>
+  </function>
+</struct>

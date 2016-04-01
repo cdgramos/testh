@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<typedef id="dist.h::dist" name="dist" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <type name="TestHDistribution" ref="dist.h#dist.h::TestHDistribution" />
+  <function id="dist_CDFProb" name="dist_CDFProb">
+    <return>
+      <type builtin="yes" name="double" />
+    </return>
+    <argument id="dist_CDFProb::d" name="d">
+      <type name="dist" ref="dist.h::dist#dist.h::dist" />
+    </argument>
+    <argument id="dist_CDFProb::x" name="x">
+      <type builtin="yes" name="double" />
+    </argument>
+  </function>
+  <function id="dist_CheckDist" name="dist_CheckDist">
+    <return>
+      <type builtin="yes" name="int" />
+    </return>
+    <argument id="dist_CheckDist::d" name="d">
+      <type name="dist" ref="dist.h::dist#dist.h::dist" />
+    </argument>
+  </function>
+  <function id="dist_PDFProb" name="dist_PDFProb">
+    <return>
+      <type builtin="yes" name="double" />
+    </return>
+    <argument id="dist_PDFProb::d" name="d">
+      <type name="dist" ref="dist.h::dist#dist.h::dist" />
+    </argument>
+    <argument id="dist_PDFProb::x" name="x">
+      <type builtin="yes" name="double" />
+    </argument>
+  </function>
+</typedef>

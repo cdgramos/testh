@@ -1,0 +1,530 @@
+<?xml version='1.0' encoding='utf-8'?>
+<report id="report" title="Documention generator" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <doc>
+This page provides a documentation coverage report. Any undocumented symbols
+are reported here together with the location of where you should document them.
+
+This report contains the following sections:
+
+1. [Coverage](#report/coverage): The documented symbols coverage.
+2. [Arguments](#report/arguments): Errors about undocumented, misspelled function arguments and
+return values.
+3. [References](#report/references): Unresolved cross references.
+</doc>
+  <coverage>
+    <type documented="12" name="category" undocumented="0" />
+    <type documented="29" name="function" undocumented="79">
+      <undocumented id="batt_Generator" name="batt_Generator">
+        <location column="1" file="include/batt.h" line="13" />
+      </undocumented>
+      <undocumented id="batt_Process" name="batt_Process">
+        <location column="1" file="include/batt.h" line="16" />
+      </undocumented>
+      <undocumented id="dist_Buckets" name="dist_Buckets">
+        <location column="1" file="include/dist.h" line="40" />
+      </undocumented>
+      <undocumented id="dist_CDFIncremental" name="dist_CDFIncremental">
+        <location column="1" file="include/dist.h" line="42" />
+      </undocumented>
+      <undocumented id="dist_CDFProb" name="dist_CDFProb">
+        <location column="1" file="include/dist.h" line="22" />
+      </undocumented>
+      <undocumented id="dist_CheckDist" name="dist_CheckDist">
+        <location column="1" file="include/dist.h" line="19" />
+      </undocumented>
+      <undocumented id="dist_ExponentialCDF" name="dist_ExponentialCDF">
+        <location column="1" file="include/dist.h" line="32" />
+      </undocumented>
+      <undocumented id="dist_ExponentialInv" name="dist_ExponentialInv">
+        <location column="1" file="include/dist.h" line="38" />
+      </undocumented>
+      <undocumented id="dist_ExponentialPDF" name="dist_ExponentialPDF">
+        <location column="1" file="include/dist.h" line="27" />
+      </undocumented>
+      <undocumented id="dist_F" name="dist_F">
+        <location column="1" file="include/dist.h" line="44" />
+      </undocumented>
+      <undocumented id="dist_GaussBoxMuller" name="dist_GaussBoxMuller">
+        <location column="1" file="include/dist.h" line="35" />
+      </undocumented>
+      <undocumented id="dist_GaussCDF" name="dist_GaussCDF">
+        <location column="1" file="include/dist.h" line="30" />
+      </undocumented>
+      <undocumented id="dist_GaussPDF" name="dist_GaussPDF">
+        <location column="1" file="include/dist.h" line="25" />
+      </undocumented>
+      <undocumented id="dist_GaussPolar" name="dist_GaussPolar">
+        <location column="1" file="include/dist.h" line="36" />
+      </undocumented>
+      <undocumented id="dist_PDFProb" name="dist_PDFProb">
+        <location column="1" file="include/dist.h" line="21" />
+      </undocumented>
+      <undocumented id="dist_ParetoCDF" name="dist_ParetoCDF">
+        <location column="1" file="include/dist.h" line="31" />
+      </undocumented>
+      <undocumented id="dist_ParetoInv" name="dist_ParetoInv">
+        <location column="1" file="include/dist.h" line="37" />
+      </undocumented>
+      <undocumented id="dist_ParetoPDF" name="dist_ParetoPDF">
+        <location column="1" file="include/dist.h" line="26" />
+      </undocumented>
+      <undocumented id="dist_UnifCDF" name="dist_UnifCDF">
+        <location column="1" file="include/dist.h" line="29" />
+      </undocumented>
+      <undocumented id="dist_UnifInv" name="dist_UnifInv">
+        <location column="1" file="include/dist.h" line="34" />
+      </undocumented>
+      <undocumented id="dist_UnifPDF" name="dist_UnifPDF">
+        <location column="1" file="include/dist.h" line="24" />
+      </undocumented>
+      <undocumented id="est_AbsoluteMomentsTime" name="est_AbsoluteMomentsTime">
+        <location column="1" file="include/est.h" line="37" />
+      </undocumented>
+      <undocumented id="est_EmbeddedBranchingProcess" name="est_EmbeddedBranchingProcess">
+        <location column="1" file="include/est.h" line="39" />
+      </undocumented>
+      <undocumented id="func_gammq" name="func_gammq">
+        <location column="1" file="include/func.h" line="11" />
+      </undocumented>
+      <undocumented id="func_qsimp" name="func_qsimp">
+        <location column="1" file="include/func.h" line="10" />
+      </undocumented>
+      <undocumented id="gen_AggRenewal" name="gen_AggRenewal">
+        <location column="1" file="include/gen.h" line="48" />
+      </undocumented>
+      <undocumented id="gen_CheckGen" name="gen_CheckGen">
+        <location column="1" file="include/gen.h" line="30" />
+      </undocumented>
+      <undocumented id="gen_ExternGen" name="gen_ExternGen">
+        <location column="1" file="include/gen.h" line="34" />
+      </undocumented>
+      <undocumented id="gen_Gaussian" name="gen_Gaussian">
+        <location column="1" file="include/gen.h" line="45" />
+      </undocumented>
+      <undocumented id="gen_GenProc" name="gen_GenProc">
+        <location column="1" file="include/gen.h" line="32" />
+      </undocumented>
+      <undocumented id="gen_Hosking" name="gen_Hosking">
+        <location column="1" file="include/gen.h" line="56" />
+      </undocumented>
+      <undocumented id="gen_Paxson" name="gen_Paxson">
+        <location column="1" file="include/gen.h" line="57" />
+      </undocumented>
+      <undocumented id="gen_PrintHeader" name="gen_PrintHeader">
+        <location column="1" file="include/gen.h" line="29" />
+      </undocumented>
+      <undocumented id="gen_ReadFile" name="gen_ReadFile">
+        <location column="1" file="include/gen.h" line="38" />
+      </undocumented>
+      <undocumented id="gen_ReadFileMatrix" name="gen_ReadFileMatrix">
+        <location column="1" file="include/gen.h" line="40" />
+      </undocumented>
+      <undocumented id="gen_ReadFileTime" name="gen_ReadFileTime">
+        <location column="1" file="include/gen.h" line="42" />
+      </undocumented>
+      <undocumented id="gen_SimpleSelfSimilarProcessGenerator" name="gen_SimpleSelfSimilarProcessGenerator">
+        <location column="1" file="include/gen.h" line="53" />
+      </undocumented>
+      <undocumented id="gen_fBmSequentialGenerationAlgorithm" name="gen_fBmSequentialGenerationAlgorithm">
+        <location column="1" file="include/gen.h" line="51" />
+      </undocumented>
+      <undocumented id="io_FileColumns" name="io_FileColumns">
+        <location column="1" file="include/io.h" line="160" />
+      </undocumented>
+      <undocumented id="io_FileGetNum" name="io_FileGetNum">
+        <location column="1" file="include/io.h" line="163" />
+      </undocumented>
+      <undocumented id="proc_Aggregate" name="proc_Aggregate">
+        <location column="1" file="include/proc.h" line="74" />
+      </undocumented>
+      <undocumented id="proc_CheckPoints" name="proc_CheckPoints">
+        <location column="1" file="include/proc.h" line="90" />
+      </undocumented>
+      <undocumented id="proc_CheckProcess" name="proc_CheckProcess">
+        <location column="1" file="include/proc.h" line="93" />
+      </undocumented>
+      <undocumented id="proc_CheckScales" name="proc_CheckScales">
+        <location column="1" file="include/proc.h" line="92" />
+      </undocumented>
+      <undocumented id="proc_CheckScalesConfig" name="proc_CheckScalesConfig">
+        <location column="1" file="include/proc.h" line="91" />
+      </undocumented>
+      <undocumented id="proc_CreatePoints" name="proc_CreatePoints">
+        <location column="1" file="include/proc.h" line="66" />
+      </undocumented>
+      <undocumented id="proc_CreateProcess" name="proc_CreateProcess">
+        <location column="1" file="include/proc.h" line="64" />
+      </undocumented>
+      <undocumented id="proc_CreateScales" name="proc_CreateScales">
+        <location column="1" file="include/proc.h" line="71" />
+      </undocumented>
+      <undocumented id="proc_CreateScalesConfig" name="proc_CreateScalesConfig">
+        <location column="1" file="include/proc.h" line="69" />
+      </undocumented>
+      <undocumented id="proc_CreateScalesTime" name="proc_CreateScalesTime">
+        <location column="1" file="include/proc.h" line="72" />
+      </undocumented>
+      <undocumented id="proc_DeletePoints" name="proc_DeletePoints">
+        <location column="1" file="include/proc.h" line="88" />
+      </undocumented>
+      <undocumented id="proc_DeleteProcess" name="proc_DeleteProcess">
+        <location column="1" file="include/proc.h" line="86" />
+      </undocumented>
+      <undocumented id="proc_DeleteScales" name="proc_DeleteScales">
+        <location column="1" file="include/proc.h" line="87" />
+      </undocumented>
+      <undocumented id="proc_FractionalBrownianMotion" name="proc_FractionalBrownianMotion">
+        <location column="1" file="include/proc.h" line="77" />
+      </undocumented>
+      <undocumented id="proc_FractionalGaussianNoise" name="proc_FractionalGaussianNoise">
+        <location column="1" file="include/proc.h" line="76" />
+      </undocumented>
+      <undocumented id="proc_Normalize" name="proc_Normalize">
+        <location column="1" file="include/proc.h" line="75" />
+      </undocumented>
+      <undocumented id="proc_PrintHeader" name="proc_PrintHeader">
+        <location column="1" file="include/proc.h" line="81" />
+      </undocumented>
+      <undocumented id="proc_PrintHeaderScales" name="proc_PrintHeaderScales">
+        <location column="1" file="include/proc.h" line="95" />
+      </undocumented>
+      <undocumented id="proc_PrintPoints" name="proc_PrintPoints">
+        <location column="1" file="include/proc.h" line="84" />
+      </undocumented>
+      <undocumented id="proc_PrintProcess" name="proc_PrintProcess">
+        <location column="1" file="include/proc.h" line="82" />
+      </undocumented>
+      <undocumented id="proc_PrintProcessStruct" name="proc_PrintProcessStruct">
+        <location column="1" file="include/proc.h" line="79" />
+      </undocumented>
+      <undocumented id="proc_PrintScales" name="proc_PrintScales">
+        <location column="1" file="include/proc.h" line="83" />
+      </undocumented>
+      <undocumented id="proc_SizeOfProcess" name="proc_SizeOfProcess">
+        <location column="1" file="include/proc.h" line="97" />
+      </undocumented>
+      <undocumented id="sim_NetworkTraffic" name="sim_NetworkTraffic">
+        <location column="1" file="include/sim.h" line="12" />
+      </undocumented>
+      <undocumented id="stat_AbsoluteMomentsTime" name="stat_AbsoluteMomentsTime">
+        <location column="1" file="include/stat.h" line="18" />
+      </undocumented>
+      <undocumented id="stat_Autocorrelation" name="stat_Autocorrelation">
+        <location column="1" file="include/stat.h" line="25" />
+      </undocumented>
+      <undocumented id="stat_Autovariance" name="stat_Autovariance">
+        <location column="1" file="include/stat.h" line="23" />
+      </undocumented>
+      <undocumented id="stat_Covariance" name="stat_Covariance">
+        <location column="1" file="include/stat.h" line="24" />
+      </undocumented>
+      <undocumented id="stat_GOFChiSquare" name="stat_GOFChiSquare">
+        <location column="1" file="include/stat.h" line="28" />
+      </undocumented>
+      <undocumented id="stat_GOFKolmogorovSmirnov" name="stat_GOFKolmogorovSmirnov">
+        <location column="1" file="include/stat.h" line="27" />
+      </undocumented>
+      <undocumented id="stat_Max" name="stat_Max">
+        <location column="1" file="include/stat.h" line="22" />
+      </undocumented>
+      <undocumented id="stat_Mean" name="stat_Mean">
+        <location column="1" file="include/stat.h" line="17" />
+      </undocumented>
+      <undocumented id="stat_Min" name="stat_Min">
+        <location column="1" file="include/stat.h" line="21" />
+      </undocumented>
+      <undocumented id="stat_StdDeviation" name="stat_StdDeviation">
+        <location column="1" file="include/stat.h" line="19" />
+      </undocumented>
+      <undocumented id="stat_Variance" name="stat_Variance">
+        <location column="1" file="include/stat.h" line="20" />
+      </undocumented>
+      <undocumented id="util_MemWr" name="util_MemWr">
+        <location column="1" file="include/util.h" line="40" />
+      </undocumented>
+      <undocumented id="util_TimeIt" name="util_TimeIt">
+        <location column="1" file="include/util.h" line="42" />
+      </undocumented>
+      <undocumented id="util_TimeReset" name="util_TimeReset">
+        <location column="1" file="include/util.h" line="44" />
+      </undocumented>
+      <undocumented id="util_TimeWr" name="util_TimeWr">
+        <location column="1" file="include/util.h" line="43" />
+      </undocumented>
+    </type>
+    <type documented="0" name="typedef" undocumented="6">
+      <undocumented id="dist.h::dist" name="dist">
+        <location column="1" file="include/dist.h" line="17" />
+      </undocumented>
+      <undocumented id="est.h::est" name="est">
+        <location column="1" file="include/est.h" line="17" />
+      </undocumented>
+      <undocumented id="gen.h::gen" name="gen">
+        <location column="1" file="include/gen.h" line="26" />
+      </undocumented>
+      <undocumented id="io.h::verb" name="verb">
+        <location column="1" file="include/io.h" line="26" />
+      </undocumented>
+      <undocumented id="proc.h::tos" name="tos">
+        <location column="1" file="include/proc.h" line="20" />
+      </undocumented>
+      <undocumented id="proc.h::tosig" name="tosig">
+        <location column="1" file="include/proc.h" line="19" />
+      </undocumented>
+    </type>
+    <type documented="0" name="struct" undocumented="5">
+      <undocumented id="proc.h::proc_Points" name="proc_Points">
+        <location column="9" file="include/proc.h" line="35" />
+        <location column="1" file="include/proc.h" line="35" />
+      </undocumented>
+      <undocumented id="proc.h::proc_Process" name="proc_Process">
+        <location column="9" file="include/proc.h" line="55" />
+        <location column="1" file="include/proc.h" line="55" />
+      </undocumented>
+      <undocumented id="proc.h::proc_Scales" name="proc_Scales">
+        <location column="9" file="include/proc.h" line="50" />
+        <location column="1" file="include/proc.h" line="50" />
+      </undocumented>
+      <undocumented id="proc.h::proc_ScalesConfig" name="proc_ScalesConfig">
+        <location column="9" file="include/proc.h" line="23" />
+        <location column="1" file="include/proc.h" line="23" />
+      </undocumented>
+      <undocumented id="reg.h::reg_Linear" name="reg_Linear">
+        <location column="9" file="include/reg.h" line="8" />
+        <location column="1" file="include/reg.h" line="8" />
+      </undocumented>
+    </type>
+    <type documented="0" name="enum" undocumented="6">
+      <undocumented id="dist.h::TestHDistribution" name="TestHDistribution">
+        <location column="1" file="include/dist.h" line="10" />
+      </undocumented>
+      <undocumented id="est.h::TestHEstimator" name="TestHEstimator">
+        <location column="1" file="include/est.h" line="10" />
+      </undocumented>
+      <undocumented id="gen.h::TestHGenerator" name="TestHGenerator">
+        <location column="1" file="include/gen.h" line="10" />
+      </undocumented>
+      <undocumented id="io.h::TestHVerbosity" name="TestHVerbosity">
+        <location column="1" file="include/io.h" line="19" />
+      </undocumented>
+      <undocumented id="proc.h::TestHTypeOfScale" name="TestHTypeOfScale">
+        <location column="1" file="include/proc.h" line="13" />
+      </undocumented>
+      <undocumented id="proc.h::TestHTypeOfSignal" name="TestHTypeOfSignal">
+        <location column="1" file="include/proc.h" line="8" />
+      </undocumented>
+    </type>
+    <type documented="0" name="enumvalue" undocumented="28">
+      <undocumented id="dist.h::TestH_Exp" name="TestH_Exp">
+        <location column="2" file="include/dist.h" line="14" />
+      </undocumented>
+      <undocumented id="dist.h::TestH_Gauss" name="TestH_Gauss">
+        <location column="2" file="include/dist.h" line="12" />
+      </undocumented>
+      <undocumented id="dist.h::TestH_Pareto" name="TestH_Pareto">
+        <location column="2" file="include/dist.h" line="13" />
+      </undocumented>
+      <undocumented id="dist.h::TestH_Unif" name="TestH_Unif">
+        <location column="2" file="include/dist.h" line="11" />
+      </undocumented>
+      <undocumented id="est.h::TestH_AMT" name="TestH_AMT">
+        <location column="2" file="include/est.h" line="13" />
+      </undocumented>
+      <undocumented id="est.h::TestH_EBP" name="TestH_EBP">
+        <location column="2" file="include/est.h" line="14" />
+      </undocumented>
+      <undocumented id="est.h::TestH_RS" name="TestH_RS">
+        <location column="2" file="include/est.h" line="11" />
+      </undocumented>
+      <undocumented id="est.h::TestH_VT" name="TestH_VT">
+        <location column="2" file="include/est.h" line="12" />
+      </undocumented>
+      <undocumented id="gen.h::TestH_3SPG" name="TestH_3SPG">
+        <location column="2" file="include/gen.h" line="21" />
+      </undocumented>
+      <undocumented id="gen.h::TestH_AR" name="TestH_AR">
+        <location column="2" file="include/gen.h" line="19" />
+      </undocumented>
+      <undocumented id="gen.h::TestH_EG" name="TestH_EG">
+        <location column="2" file="include/gen.h" line="11" />
+      </undocumented>
+      <undocumented id="gen.h::TestH_Gaussian" name="TestH_Gaussian">
+        <location column="2" file="include/gen.h" line="17" />
+      </undocumented>
+      <undocumented id="gen.h::TestH_Hosk" name="TestH_Hosk">
+        <location column="2" file="include/gen.h" line="22" />
+      </undocumented>
+      <undocumented id="gen.h::TestH_Pax" name="TestH_Pax">
+        <location column="2" file="include/gen.h" line="23" />
+      </undocumented>
+      <undocumented id="gen.h::TestH_RF" name="TestH_RF">
+        <location column="2" file="include/gen.h" line="12" />
+      </undocumented>
+      <undocumented id="gen.h::TestH_RFM" name="TestH_RFM">
+        <location column="2" file="include/gen.h" line="13" />
+      </undocumented>
+      <undocumented id="gen.h::TestH_RFT" name="TestH_RFT">
+        <location column="2" file="include/gen.h" line="14" />
+      </undocumented>
+      <undocumented id="gen.h::TestH_RFTA" name="TestH_RFTA">
+        <location column="2" file="include/gen.h" line="15" />
+      </undocumented>
+      <undocumented id="gen.h::TestH_fBmSGA" name="TestH_fBmSGA">
+        <location column="2" file="include/gen.h" line="20" />
+      </undocumented>
+      <undocumented id="io.h::TestH_HIGH" name="TestH_HIGH">
+        <location column="2" file="include/io.h" line="23" />
+      </undocumented>
+      <undocumented id="io.h::TestH_LOW" name="TestH_LOW">
+        <location column="2" file="include/io.h" line="21" />
+      </undocumented>
+      <undocumented id="io.h::TestH_MEDIUM" name="TestH_MEDIUM">
+        <location column="2" file="include/io.h" line="22" />
+      </undocumented>
+      <undocumented id="io.h::TestH_NONE" name="TestH_NONE">
+        <location column="2" file="include/io.h" line="20" />
+      </undocumented>
+      <undocumented id="proc.h::TestH_INC" name="TestH_INC">
+        <location column="2" file="include/proc.h" line="14" />
+      </undocumented>
+      <undocumented id="proc.h::TestH_POW" name="TestH_POW">
+        <location column="2" file="include/proc.h" line="16" />
+      </undocumented>
+      <undocumented id="proc.h::TestH_RAND" name="TestH_RAND">
+        <location column="2" file="include/proc.h" line="15" />
+      </undocumented>
+      <undocumented id="proc.h::TestH_fBm" name="TestH_fBm">
+        <location column="2" file="include/proc.h" line="10" />
+      </undocumented>
+      <undocumented id="proc.h::TestH_fGn" name="TestH_fGn">
+        <location column="2" file="include/proc.h" line="9" />
+      </undocumented>
+    </type>
+    <type documented="0" name="field" undocumented="23">
+      <undocumented id="proc.h::proc_Points::amt" name="amt">
+        <location column="2" file="include/proc.h" line="46" />
+        <location column="2" file="include/proc.h" line="46" />
+      </undocumented>
+      <undocumented id="proc.h::proc_Points::mean" name="mean">
+        <location column="2" file="include/proc.h" line="43" />
+        <location column="2" file="include/proc.h" line="43" />
+      </undocumented>
+      <undocumented id="proc.h::proc_Points::moment" name="moment">
+        <location column="2" file="include/proc.h" line="47" />
+        <location column="2" file="include/proc.h" line="47" />
+      </undocumented>
+      <undocumented id="proc.h::proc_Points::points" name="points">
+        <location column="2" file="include/proc.h" line="36" />
+        <location column="2" file="include/proc.h" line="36" />
+      </undocumented>
+      <undocumented id="proc.h::proc_Points::scale" name="scale">
+        <location column="2" file="include/proc.h" line="38" />
+        <location column="2" file="include/proc.h" line="38" />
+      </undocumented>
+      <undocumented id="proc.h::proc_Points::size" name="size">
+        <location column="2" file="include/proc.h" line="39" />
+        <location column="2" file="include/proc.h" line="39" />
+      </undocumented>
+      <undocumented id="proc.h::proc_Points::stdDev" name="stdDev">
+        <location column="2" file="include/proc.h" line="44" />
+        <location column="2" file="include/proc.h" line="44" />
+      </undocumented>
+      <undocumented id="proc.h::proc_Points::times" name="times">
+        <location column="2" file="include/proc.h" line="37" />
+        <location column="2" file="include/proc.h" line="37" />
+      </undocumented>
+      <undocumented id="proc.h::proc_Points::typeOfSignal" name="typeOfSignal">
+        <location column="2" file="include/proc.h" line="41" />
+        <location column="2" file="include/proc.h" line="41" />
+      </undocumented>
+      <undocumented id="proc.h::proc_Process::name" name="name">
+        <location column="2" file="include/proc.h" line="59" />
+        <location column="2" file="include/proc.h" line="59" />
+      </undocumented>
+      <undocumented id="proc.h::proc_Process::points" name="points">
+        <location column="2" file="include/proc.h" line="56" />
+        <location column="2" file="include/proc.h" line="56" />
+      </undocumented>
+      <undocumented id="proc.h::proc_Process::scales" name="scales">
+        <location column="2" file="include/proc.h" line="57" />
+        <location column="2" file="include/proc.h" line="57" />
+      </undocumented>
+      <undocumented id="proc.h::proc_Process::scales_on" name="scales_on">
+        <location column="2" file="include/proc.h" line="58" />
+        <location column="2" file="include/proc.h" line="58" />
+      </undocumented>
+      <undocumented id="proc.h::proc_Scales::conf" name="conf">
+        <location column="2" file="include/proc.h" line="52" />
+        <location column="2" file="include/proc.h" line="52" />
+      </undocumented>
+      <undocumented id="proc.h::proc_Scales::scales" name="scales">
+        <location column="2" file="include/proc.h" line="51" />
+        <location column="2" file="include/proc.h" line="51" />
+      </undocumented>
+      <undocumented id="proc.h::proc_ScalesConfig::max" name="max">
+        <location column="2" file="include/proc.h" line="27" />
+        <location column="2" file="include/proc.h" line="27" />
+      </undocumented>
+      <undocumented id="proc.h::proc_ScalesConfig::min" name="min">
+        <location column="2" file="include/proc.h" line="26" />
+        <location column="2" file="include/proc.h" line="26" />
+      </undocumented>
+      <undocumented id="proc.h::proc_ScalesConfig::mov" name="mov">
+        <location column="2" file="include/proc.h" line="29" />
+        <location column="2" file="include/proc.h" line="29" />
+      </undocumented>
+      <undocumented id="proc.h::proc_ScalesConfig::no" name="no">
+        <location column="2" file="include/proc.h" line="28" />
+        <location column="2" file="include/proc.h" line="28" />
+      </undocumented>
+      <undocumented id="proc.h::proc_ScalesConfig::scales" name="scales">
+        <location column="2" file="include/proc.h" line="30" />
+        <location column="2" file="include/proc.h" line="30" />
+      </undocumented>
+      <undocumented id="proc.h::proc_ScalesConfig::typeOfScale" name="typeOfScale">
+        <location column="2" file="include/proc.h" line="24" />
+        <location column="2" file="include/proc.h" line="24" />
+      </undocumented>
+      <undocumented id="reg.h::reg_Linear::b" name="b">
+        <location column="2" file="include/reg.h" line="10" />
+        <location column="2" file="include/reg.h" line="10" />
+      </undocumented>
+      <undocumented id="reg.h::reg_Linear::m" name="m">
+        <location column="2" file="include/reg.h" line="9" />
+        <location column="2" file="include/reg.h" line="9" />
+      </undocumented>
+    </type>
+    <type documented="0" name="variable" undocumented="7">
+      <undocumented id="io.h::TestHEstPrintH" name="TestHEstPrintH">
+        <location column="1" file="include/io.h" line="33" />
+      </undocumented>
+      <undocumented id="io.h::TestHEstWrToFile" name="TestHEstWrToFile">
+        <location column="1" file="include/io.h" line="34" />
+      </undocumented>
+      <undocumented id="io.h::TestHPrintHeader" name="TestHPrintHeader">
+        <location column="1" file="include/io.h" line="31" />
+      </undocumented>
+      <undocumented id="io.h::TestHPrintMemCPU" name="TestHPrintMemCPU">
+        <location column="1" file="include/io.h" line="32" />
+      </undocumented>
+      <undocumented id="io.h::TestHPrintPlain" name="TestHPrintPlain">
+        <location column="1" file="include/io.h" line="29" />
+      </undocumented>
+      <undocumented id="io.h::TestHPrintSep" name="TestHPrintSep">
+        <location column="1" file="include/io.h" line="30" />
+      </undocumented>
+      <undocumented id="io.h::TestHVerbosity" name="TestHVerbosity">
+        <location column="1" file="include/io.h" line="28" />
+      </undocumented>
+    </type>
+  </coverage>
+  <arguments />
+  <references>
+    <function id="io_CheckH" name="io_CheckH">
+      <location column="1" file="include/io.h" line="103" />
+      <doctype name="returns">
+        <ref name=" 0.0 || h " />
+      </doctype>
+    </function>
+  </references>
+</report>

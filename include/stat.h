@@ -1,5 +1,5 @@
 /* cldoc:begin-category(stat.h) 
-* stat.h provides statistical functions
+* stat.h provides statistical functions.
 */
 
 #ifndef __TESTH_STATISTICS__

@@ -1,5 +1,5 @@
 /* cldoc:begin-category(est.h) 
-* est.h provides estimators of the hurst parameter
+* est.h provides estimators of the hurst parameter.
 */
 
 #ifndef __TESTH_ESTIMATORS__

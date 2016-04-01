@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='utf-8'?>
+<category id="util.h" name="util.h" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <brief>defines general memory, time, sort and system functions.</brief>
+  <function id="util_BubbleSort" name="util_BubbleSort">
+    <brief> util_BubbleSort Function.</brief>
+    <doc>util_BubbleSort sort na array using the bubble sort algorithm.</doc>
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="util_BubbleSort::v" name="v">
+      <doc>pointer to the array.</doc>
+      <type builtin="yes" name="double" qualifier="*" />
+    </argument>
+    <argument id="util_BubbleSort::size" name="size">
+      <doc>size of the array.</doc>
+      <type builtin="yes" name="int" />
+    </argument>
+  </function>
+  <function id="util_Copy" name="util_Copy">
+    <brief> util_Copy Function.</brief>
+    <doc>util_Copy copy the content of a memory block to another memory block.</doc>
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="util_Copy::v" name="v">
+      <doc>origin memory block.</doc>
+      <type builtin="yes" name="double" qualifier="*" />
+    </argument>
+    <argument id="util_Copy::v2" name="v2">
+      <doc>destin memory block.</doc>
+      <type builtin="yes" name="double" qualifier="*" />
+    </argument>
+    <argument id="util_Copy::size" name="size">
+      <doc>number of elements to be copied.</doc>
+      <type builtin="yes" name="int" />
+    </argument>
+  </function>
+  <function id="util_GetCwd" name="util_GetCwd">
+    <brief> util_GetCwd Function.</brief>
+    <doc>util_GetCwd return current working directory.
+</doc>
+    <return>
+      <doc>return current working directory.</doc>
+      <type builtin="yes" name="char" qualifier="*" />
+    </return>
+  </function>
+  <function id="util_GetHostname" name="util_GetHostname">
+    <brief> util_GetHostname Function.</brief>
+    <doc>util_GetHostname return the host name of the machine.
+</doc>
+    <return>
+      <doc>return the host name of the machine.</doc>
+      <type builtin="yes" name="char" qualifier="*" />
+    </return>
+  </function>
+  <function id="util_GetUsername" name="util_GetUsername">
+    <brief> util_GetUsername Function.</brief>
+    <doc>util_GetUsername return the username of the machine.
+</doc>
+    <return>
+      <doc>return the username of the machine.</doc>
+      <type builtin="yes" name="char" qualifier="*" />
+    </return>
+  </function>
+  <function id="util_MemCalloc" name="util_MemCalloc">
+    <brief> util_MemCalloc Function.</brief>
+    <doc>util_MemCalloc allocates a block of memory with the size of a given number using the Calloc function. Returns the pointer to the block.</doc>
+    <return>
+      <type builtin="yes" name="void" qualifier="*" />
+    </return>
+    <argument id="util_MemCalloc::num" name="num">
+      <doc>number of elements to allocate.</doc>
+      <type name="size_t" />
+    </argument>
+    <argument id="util_MemCalloc::size" name="size">
+      <doc>size of each element.</doc>
+      <type name="size_t" />
+    </argument>
+  </function>
+  <function id="util_MemFree" name="util_MemFree">
+    <brief> util_MemFree Function.</brief>
+    <doc>util_MemFree free a memory block.</doc>
+    <return>
+      <type builtin="yes" name="void" qualifier="*" />
+    </return>
+    <argument id="util_MemFree::p" name="p">
+      <doc>pointer to the block to be deallocated.</doc>
+      <type builtin="yes" name="void" qualifier="*" />
+    </argument>
+  </function>
+  <function id="util_MemMalloc" name="util_MemMalloc">
+    <brief> util_MemMalloc Function.</brief>
+    <doc>util_MemMalloc allocates a block of memory with the size of a given number using the Malloc function. Returns the pointer to the block.</doc>
+    <return>
+      <type builtin="yes" name="void" qualifier="*" />
+    </return>
+    <argument id="util_MemMalloc::num" name="num">
+      <doc>number of bytes to allocate.</doc>
+      <type name="size_t" />
+    </argument>
+  </function>
+  <function id="util_MemRealloc" name="util_MemRealloc">
+    <brief> util_MemRealloc Function.</brief>
+    <doc>util_MemRealloc rellocate a memory block  pointed by p.</doc>
+    <return>
+      <type builtin="yes" name="void" qualifier="*" />
+    </return>
+    <argument id="util_MemRealloc::p" name="p">
+      <doc>pointer to the block we want to reallocate.</doc>
+      <type builtin="yes" name="void" qualifier="*" />
+    </argument>
+    <argument id="util_MemRealloc::num" name="num">
+      <doc>new size of the memory block in bytes.</doc>
+      <type name="size_t" />
+    </argument>
+  </function>
+  <function id="util_MemWr" name="util_MemWr">
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="util_MemWr::B" name="B">
+      <type builtin="yes" name="long" />
+    </argument>
+  </function>
+  <function id="util_TimeIt" name="util_TimeIt">
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="util_TimeIt::c" name="c">
+      <type name="clock_t" qualifier="*" />
+    </argument>
+  </function>
+  <function id="util_TimeReset" name="util_TimeReset">
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="util_TimeReset::c" name="c">
+      <type name="clock_t" qualifier="*" />
+    </argument>
+  </function>
+  <function id="util_TimeWr" name="util_TimeWr">
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="util_TimeWr::start" name="start">
+      <type name="clock_t" qualifier="*" />
+    </argument>
+  </function>
+</category>

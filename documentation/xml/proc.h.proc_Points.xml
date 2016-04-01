@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct id="proc.h::proc_Points" name="proc_Points" typedef="yes" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <field id="proc.h::proc_Points::points" name="points">
+    <type builtin="yes" name="double" qualifier="*" />
+  </field>
+  <field id="proc.h::proc_Points::times" name="times">
+    <type builtin="yes" name="double" qualifier="*" />
+  </field>
+  <field id="proc.h::proc_Points::scale" name="scale">
+    <type builtin="yes" name="unsigned int" />
+  </field>
+  <field id="proc.h::proc_Points::size" name="size">
+    <type builtin="yes" name="unsigned long long" />
+  </field>
+  <field id="proc.h::proc_Points::typeOfSignal" name="typeOfSignal">
+    <type name="tosig" ref="proc.h#proc.h::tosig" />
+  </field>
+  <field id="proc.h::proc_Points::mean" name="mean">
+    <type builtin="yes" name="double" />
+  </field>
+  <field id="proc.h::proc_Points::stdDev" name="stdDev">
+    <type builtin="yes" name="double" />
+  </field>
+  <field id="proc.h::proc_Points::amt" name="amt">
+    <type builtin="yes" name="double" />
+  </field>
+  <field id="proc.h::proc_Points::moment" name="moment">
+    <type builtin="yes" name="unsigned int" />
+  </field>
+  <function id="proc_CheckPoints" name="proc_CheckPoints">
+    <return>
+      <type builtin="yes" name="int" />
+    </return>
+    <argument id="proc_CheckPoints::pt" name="pt">
+      <type name="proc_Points" qualifier="*" ref="proc.h::proc_Points#proc.h::proc_Points" />
+    </argument>
+  </function>
+  <function id="proc_DeletePoints" name="proc_DeletePoints">
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="proc_DeletePoints::pt" name="pt">
+      <type name="proc_Points" qualifier="*" ref="proc.h::proc_Points#proc.h::proc_Points" />
+    </argument>
+  </function>
+  <function id="proc_PrintPoints" name="proc_PrintPoints">
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="proc_PrintPoints::pt" name="pt">
+      <type name="proc_Points" qualifier="*" ref="proc.h::proc_Points#proc.h::proc_Points" />
+    </argument>
+  </function>
+</struct>

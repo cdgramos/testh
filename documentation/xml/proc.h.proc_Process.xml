@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct id="proc.h::proc_Process" name="proc_Process" typedef="yes" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <field id="proc.h::proc_Process::points" name="points">
+    <type name="proc_Points" qualifier="*" ref="proc.h::proc_Points#proc.h::proc_Points" />
+  </field>
+  <field id="proc.h::proc_Process::scales" name="scales">
+    <type name="proc_Scales" qualifier="*" ref="proc.h::proc_Scales#proc.h::proc_Scales" />
+  </field>
+  <field id="proc.h::proc_Process::scales_on" name="scales_on">
+    <type builtin="yes" name="int" />
+  </field>
+  <field id="proc.h::proc_Process::name" name="name">
+    <type builtin="yes" name="char" qualifier="*" />
+  </field>
+  <function id="batt_Process" name="batt_Process">
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="batt_Process::pr" name="pr">
+      <type name="proc_Process" qualifier="*" ref="proc.h::proc_Process#proc.h::proc_Process" />
+    </argument>
+    <argument id="batt_Process::conf" name="conf">
+      <type name="proc_ScalesConfig" qualifier="*" ref="proc.h::proc_ScalesConfig#proc.h::proc_ScalesConfig" />
+    </argument>
+  </function>
+  <function id="proc_Aggregate" name="proc_Aggregate">
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="proc_Aggregate::pr" name="pr">
+      <type name="proc_Process" qualifier="*" ref="proc.h::proc_Process#proc.h::proc_Process" />
+    </argument>
+    <argument id="proc_Aggregate::m" name="m">
+      <type builtin="yes" name="int" />
+    </argument>
+  </function>
+  <function id="proc_CheckProcess" name="proc_CheckProcess">
+    <return>
+      <type builtin="yes" name="int" />
+    </return>
+    <argument id="proc_CheckProcess::pr" name="pr">
+      <type name="proc_Process" qualifier="*" ref="proc.h::proc_Process#proc.h::proc_Process" />
+    </argument>
+  </function>
+  <function id="proc_CreateScales" name="proc_CreateScales">
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="proc_CreateScales::pr" name="pr">
+      <type name="proc_Process" qualifier="*" ref="proc.h::proc_Process#proc.h::proc_Process" />
+    </argument>
+    <argument id="proc_CreateScales::conf" name="conf">
+      <type name="proc_ScalesConfig" qualifier="*" ref="proc.h::proc_ScalesConfig#proc.h::proc_ScalesConfig" />
+    </argument>
+  </function>
+  <function id="proc_CreateScalesTime" name="proc_CreateScalesTime">
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="proc_CreateScalesTime::pr" name="pr">
+      <type name="proc_Process" qualifier="*" ref="proc.h::proc_Process#proc.h::proc_Process" />
+    </argument>
+    <argument id="proc_CreateScalesTime::conf" name="conf">
+      <type name="proc_ScalesConfig" qualifier="*" ref="proc.h::proc_ScalesConfig#proc.h::proc_ScalesConfig" />
+    </argument>
+  </function>
+  <function id="proc_DeleteProcess" name="proc_DeleteProcess">
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="proc_DeleteProcess::pr" name="pr">
+      <type name="proc_Process" qualifier="*" ref="proc.h::proc_Process#proc.h::proc_Process" />
+    </argument>
+  </function>
+  <function id="proc_DeleteScales" name="proc_DeleteScales">
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="proc_DeleteScales::pr" name="pr">
+      <type name="proc_Process" qualifier="*" ref="proc.h::proc_Process#proc.h::proc_Process" />
+    </argument>
+  </function>
+  <function id="proc_FractionalBrownianMotion" name="proc_FractionalBrownianMotion">
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="proc_FractionalBrownianMotion::pr" name="pr">
+      <type name="proc_Process" qualifier="*" ref="proc.h::proc_Process#proc.h::proc_Process" />
+    </argument>
+  </function>
+  <function id="proc_FractionalGaussianNoise" name="proc_FractionalGaussianNoise">
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="proc_FractionalGaussianNoise::pr" name="pr">
+      <type name="proc_Process" qualifier="*" ref="proc.h::proc_Process#proc.h::proc_Process" />
+    </argument>
+  </function>
+  <function id="proc_Normalize" name="proc_Normalize">
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="proc_Normalize::pr" name="pr">
+      <type name="proc_Process" qualifier="*" ref="proc.h::proc_Process#proc.h::proc_Process" />
+    </argument>
+  </function>
+  <function id="proc_PrintHeader" name="proc_PrintHeader">
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="proc_PrintHeader::pr" name="pr">
+      <type name="proc_Process" qualifier="*" ref="proc.h::proc_Process#proc.h::proc_Process" />
+    </argument>
+  </function>
+  <function id="proc_PrintProcess" name="proc_PrintProcess">
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="proc_PrintProcess::pr" name="pr">
+      <type name="proc_Process" qualifier="*" ref="proc.h::proc_Process#proc.h::proc_Process" />
+    </argument>
+  </function>
+  <function id="proc_PrintProcessStruct" name="proc_PrintProcessStruct">
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="proc_PrintProcessStruct::pr" name="pr">
+      <type name="proc_Process" qualifier="*" ref="proc.h::proc_Process#proc.h::proc_Process" />
+    </argument>
+  </function>
+  <function id="proc_PrintScales" name="proc_PrintScales">
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="proc_PrintScales::pr" name="pr">
+      <type name="proc_Process" qualifier="*" ref="proc.h::proc_Process#proc.h::proc_Process" />
+    </argument>
+  </function>
+  <function id="proc_SizeOfProcess" name="proc_SizeOfProcess">
+    <return>
+      <type builtin="yes" name="long" />
+    </return>
+    <argument id="proc_SizeOfProcess::pr" name="pr">
+      <type name="proc_Process" qualifier="*" ref="proc.h::proc_Process#proc.h::proc_Process" />
+    </argument>
+  </function>
+</struct>

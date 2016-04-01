@@ -1,5 +1,5 @@
 /* cldoc:begin-category(proc.h) 
-* proc.h provides interfaces to manipulate processes
+* proc.h provides interfaces to manipulate processes.
 */
 
 #ifndef __TESTH_PROCESS__

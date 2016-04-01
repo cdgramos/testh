@@ -1,5 +1,5 @@
 /* cldoc:begin-category(dist.h) 
-* dist.h provides probability distribution functionss
+* dist.h provides probability distribution functions.
 */
 
 #ifndef __TESTH_DISTRIBUTIONS__

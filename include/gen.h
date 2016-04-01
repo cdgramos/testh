@@ -1,5 +1,5 @@
 /* cldoc:begin-category(gen.h) 
-* gen.h provides generators of self-similar sequences
+* gen.h provides generators of self-similar sequences.
 */
 
 #ifndef __TESTH_GENERATORS__

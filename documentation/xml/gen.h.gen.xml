@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8'?>
+<typedef id="gen.h::gen" name="gen" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <type name="TestHGenerator" ref="gen.h#gen.h::TestHGenerator" />
+  <function id="batt_Generator" name="batt_Generator">
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="batt_Generator::g" name="g">
+      <type name="gen" ref="gen.h::gen#gen.h::gen" />
+    </argument>
+    <argument id="batt_Generator::n" name="n">
+      <type builtin="yes" name="int" />
+    </argument>
+    <argument id="batt_Generator::sim" name="sim">
+      <type builtin="yes" name="int" />
+    </argument>
+    <argument id="batt_Generator::h1" name="h1">
+      <type builtin="yes" name="double" />
+    </argument>
+    <argument id="batt_Generator::h2" name="h2">
+      <type builtin="yes" name="double" />
+    </argument>
+    <argument id="batt_Generator::inc" name="inc">
+      <type builtin="yes" name="double" />
+    </argument>
+    <argument id="batt_Generator::conf" name="conf">
+      <type name="proc_ScalesConfig" qualifier="*" ref="proc.h::proc_ScalesConfig#proc.h::proc_ScalesConfig" />
+    </argument>
+  </function>
+  <function id="gen_CheckGen" name="gen_CheckGen">
+    <return>
+      <type builtin="yes" name="int" />
+    </return>
+    <argument id="gen_CheckGen::g" name="g">
+      <type name="gen" ref="gen.h::gen#gen.h::gen" />
+    </argument>
+  </function>
+  <function id="gen_GenProc" name="gen_GenProc">
+    <return>
+      <type name="proc_Process" qualifier="*" ref="proc.h::proc_Process#proc.h::proc_Process" />
+    </return>
+    <argument id="gen_GenProc::g" name="g">
+      <type name="gen" ref="gen.h::gen#gen.h::gen" />
+    </argument>
+    <argument id="gen_GenProc::n" name="n">
+      <type builtin="yes" name="int" />
+    </argument>
+    <argument id="gen_GenProc::h" name="h">
+      <type builtin="yes" name="double" />
+    </argument>
+  </function>
+  <function id="gen_PrintHeader" name="gen_PrintHeader">
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="gen_PrintHeader::g" name="g">
+      <type name="gen" ref="gen.h::gen#gen.h::gen" />
+    </argument>
+  </function>
+</typedef>

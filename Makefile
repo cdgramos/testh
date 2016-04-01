@@ -12,7 +12,7 @@ OUTPUTDIR = ./documentation
 OBJECTS = ${SOURCES:.c=.o}
 CXXFLAGS = 
 
-COMMON_DOC_FLAGS = --report --output $(OUTPUTDIR) $(HEADERS)
+COMMON_DOC_FLAGS = --report --merge docs --output $(OUTPUTDIR) $(HEADERS)
 
 clean:
 	rm -f ./documentation/*.html

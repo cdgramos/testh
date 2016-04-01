@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='utf-8'?>
+<category id="batt.h" name="batt.h" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <brief>batt.h provides batteries to compare various target hurst parameter values with the ones estimated for a defined generator.</brief>
+</category>

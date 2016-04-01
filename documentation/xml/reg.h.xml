@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<category id="reg.h" name="reg.h" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <brief>reg.h defines regression analysis functions and data types.</brief>
+  <struct name="reg_Linear" ref="reg.h::reg_Linear#reg.h::reg_Linear" />
+  <function id="reg_CoefficientOfDetermination" name="reg_CoefficientOfDetermination">
+    <brief> reg_CoefficientOfDetermination Function.</brief>
+    <doc>reg_CoefficientOfDetermination calculates the Coefficient of Determination which depict the relationship between two data series.
+</doc>
+    <return>
+      <doc>the coefficient of correlation (range between 0 and 1) with 0 indication that the fata doesn't fit at all and 1 indicating a perfect fit.</doc>
+      <type builtin="yes" name="double" />
+    </return>
+    <argument id="reg_CoefficientOfDetermination::y" name="y">
+      <doc>is the pointer to the first data series.</doc>
+      <type builtin="yes" name="double" qualifier="*" />
+    </argument>
+    <argument id="reg_CoefficientOfDetermination::x" name="x">
+      <doc>is the pointer to the second data series.</doc>
+      <type builtin="yes" name="double" qualifier="*" />
+    </argument>
+    <argument id="reg_CoefficientOfDetermination::n" name="n">
+      <doc>denotes the number of elements in the data series.</doc>
+      <type builtin="yes" name="int" />
+    </argument>
+  </function>
+  <function id="reg_LeastSquareMeans" name="reg_LeastSquareMeans">
+    <brief> reg_LeastSquareMeans Function.</brief>
+    <doc>reg_LeastSquareMeans calculates the overall solution that minimizes the sum of the squares of the errors.
+</doc>
+    <return>
+      <doc>returns the linear regression.</doc>
+      <type name="reg_Linear" qualifier="*" ref="reg.h::reg_Linear#reg.h::reg_Linear" />
+    </return>
+    <argument id="reg_LeastSquareMeans::y" name="y">
+      <doc>are the values for the y-axis.</doc>
+      <type builtin="yes" name="double" qualifier="*" />
+    </argument>
+    <argument id="reg_LeastSquareMeans::x" name="x">
+      <doc>are the values for the x-axis.</doc>
+      <type builtin="yes" name="double" qualifier="*" />
+    </argument>
+    <argument id="reg_LeastSquareMeans::n" name="n">
+      <doc>denotes the number of elements.</doc>
+      <type builtin="yes" name="int" />
+    </argument>
+    <argument id="reg_LeastSquareMeans::print" name="print">
+      <doc>accept the values YES or NO to print the function result.</doc>
+      <type builtin="yes" name="int" />
+    </argument>
+  </function>
+</category>

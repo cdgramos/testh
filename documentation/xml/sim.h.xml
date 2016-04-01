@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<category id="sim.h" name="sim.h" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <brief>sim.h provides generators which can simulate a certain kind of data.</brief>
+  <function id="sim_NetworkTraffic" name="sim_NetworkTraffic">
+    <return>
+      <type name="proc_Process" qualifier="*" ref="proc.h::proc_Process#proc.h::proc_Process" />
+    </return>
+    <argument id="sim_NetworkTraffic::g" name="g">
+      <type name="gen" ref="gen.h::gen#gen.h::gen" />
+    </argument>
+    <argument id="sim_NetworkTraffic::n" name="n">
+      <type builtin="yes" name="int" />
+    </argument>
+    <argument id="sim_NetworkTraffic::h" name="h">
+      <type builtin="yes" name="double" />
+    </argument>
+    <argument id="sim_NetworkTraffic::B" name="B">
+      <type builtin="yes" name="int" />
+    </argument>
+    <argument id="sim_NetworkTraffic::L" name="L">
+      <type builtin="yes" name="double" />
+    </argument>
+    <argument id="sim_NetworkTraffic::Imin" name="Imin">
+      <type builtin="yes" name="int" />
+    </argument>
+    <argument id="sim_NetworkTraffic::pkts" name="pkts">
+      <type builtin="yes" name="char" qualifier=" const *" />
+    </argument>
+  </function>
+</category>

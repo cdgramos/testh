@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct id="proc.h::proc_ScalesConfig" name="proc_ScalesConfig" typedef="yes" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <field id="proc.h::proc_ScalesConfig::typeOfScale" name="typeOfScale">
+    <type name="tos" ref="proc.h::tos#proc.h::tos" />
+  </field>
+  <field id="proc.h::proc_ScalesConfig::min" name="min">
+    <type builtin="yes" name="unsigned int" />
+  </field>
+  <field id="proc.h::proc_ScalesConfig::max" name="max">
+    <type builtin="yes" name="unsigned int" />
+  </field>
+  <field id="proc.h::proc_ScalesConfig::no" name="no">
+    <type builtin="yes" name="unsigned int" />
+  </field>
+  <field id="proc.h::proc_ScalesConfig::mov" name="mov">
+    <type builtin="yes" name="unsigned int" />
+  </field>
+  <field id="proc.h::proc_ScalesConfig::scales" name="scales">
+    <type builtin="yes" name="int" qualifier="*" />
+  </field>
+  <function id="proc_CheckScalesConfig" name="proc_CheckScalesConfig">
+    <return>
+      <type builtin="yes" name="int" />
+    </return>
+    <argument id="proc_CheckScalesConfig::conf" name="conf">
+      <type name="proc_ScalesConfig" qualifier="*" ref="proc.h::proc_ScalesConfig#proc.h::proc_ScalesConfig" />
+    </argument>
+  </function>
+  <function id="proc_PrintHeaderScales" name="proc_PrintHeaderScales">
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="proc_PrintHeaderScales::conf" name="conf">
+      <type name="proc_ScalesConfig" qualifier="*" ref="proc.h::proc_ScalesConfig#proc.h::proc_ScalesConfig" />
+    </argument>
+  </function>
+</struct>

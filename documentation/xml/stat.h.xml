@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='utf-8'?>
+<category id="stat.h" name="stat.h" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <brief>stat.h provides statistical functions.</brief>
+  <function id="stat_AbsoluteMomentsTime" name="stat_AbsoluteMomentsTime">
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="stat_AbsoluteMomentsTime::pt" name="pt">
+      <type name="proc_Points" qualifier="*" ref="proc.h::proc_Points#proc.h::proc_Points" />
+    </argument>
+    <argument id="stat_AbsoluteMomentsTime::e" name="e">
+      <type builtin="yes" name="int" />
+    </argument>
+  </function>
+  <function id="stat_Autocorrelation" name="stat_Autocorrelation">
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="stat_Autocorrelation::pr" name="pr">
+      <type name="proc_Process" qualifier="*" ref="proc.h::proc_Process#proc.h::proc_Process" />
+    </argument>
+    <argument id="stat_Autocorrelation::kmin" name="kmin">
+      <type builtin="yes" name="int" />
+    </argument>
+    <argument id="stat_Autocorrelation::kmax" name="kmax">
+      <type builtin="yes" name="int" />
+    </argument>
+    <argument id="stat_Autocorrelation::h" name="h">
+      <type builtin="yes" name="double" />
+    </argument>
+  </function>
+  <function id="stat_Autovariance" name="stat_Autovariance">
+    <return>
+      <type builtin="yes" name="double" />
+    </return>
+    <argument id="stat_Autovariance::pt" name="pt">
+      <type name="proc_Points" qualifier="*" ref="proc.h::proc_Points#proc.h::proc_Points" />
+    </argument>
+    <argument id="stat_Autovariance::k" name="k">
+      <type builtin="yes" name="int" />
+    </argument>
+  </function>
+  <function id="stat_Covariance" name="stat_Covariance">
+    <return>
+      <type builtin="yes" name="double" />
+    </return>
+    <argument id="stat_Covariance::k" name="k">
+      <type builtin="yes" name="int" />
+    </argument>
+    <argument id="stat_Covariance::h" name="h">
+      <type builtin="yes" name="double" />
+    </argument>
+  </function>
+  <function id="stat_GOFChiSquare" name="stat_GOFChiSquare">
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="stat_GOFChiSquare::pt" name="pt">
+      <type name="proc_Points" qualifier="*" ref="proc.h::proc_Points#proc.h::proc_Points" />
+    </argument>
+    <argument id="stat_GOFChiSquare::d" name="d">
+      <type name="dist" ref="dist.h::dist#dist.h::dist" />
+    </argument>
+  </function>
+  <function id="stat_GOFKolmogorovSmirnov" name="stat_GOFKolmogorovSmirnov">
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="stat_GOFKolmogorovSmirnov::pt" name="pt">
+      <type name="proc_Points" qualifier="*" ref="proc.h::proc_Points#proc.h::proc_Points" />
+    </argument>
+    <argument id="stat_GOFKolmogorovSmirnov::d" name="d">
+      <type name="dist" ref="dist.h::dist#dist.h::dist" />
+    </argument>
+  </function>
+  <function id="stat_Max" name="stat_Max">
+    <return>
+      <type builtin="yes" name="double" />
+    </return>
+    <argument id="stat_Max::pt" name="pt">
+      <type name="proc_Points" qualifier="*" ref="proc.h::proc_Points#proc.h::proc_Points" />
+    </argument>
+  </function>
+  <function id="stat_Mean" name="stat_Mean">
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="stat_Mean::pt" name="pt">
+      <type name="proc_Points" qualifier="*" ref="proc.h::proc_Points#proc.h::proc_Points" />
+    </argument>
+  </function>
+  <function id="stat_Min" name="stat_Min">
+    <return>
+      <type builtin="yes" name="double" />
+    </return>
+    <argument id="stat_Min::pt" name="pt">
+      <type name="proc_Points" qualifier="*" ref="proc.h::proc_Points#proc.h::proc_Points" />
+    </argument>
+  </function>
+  <function id="stat_StdDeviation" name="stat_StdDeviation">
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="stat_StdDeviation::pt" name="pt">
+      <type name="proc_Points" qualifier="*" ref="proc.h::proc_Points#proc.h::proc_Points" />
+    </argument>
+  </function>
+  <function id="stat_Variance" name="stat_Variance">
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="stat_Variance::pt" name="pt">
+      <type name="proc_Points" qualifier="*" ref="proc.h::proc_Points#proc.h::proc_Points" />
+    </argument>
+  </function>
+</category>

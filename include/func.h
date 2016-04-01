@@ -1,5 +1,5 @@
 /* cldoc:begin-category(func.h) 
-* func.h provides mathematical functions
+* func.h provides mathematical functions.
 */
 
 #ifndef __TESTH_FUNCTIONS__

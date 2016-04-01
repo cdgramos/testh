@@ -1,5 +1,5 @@
 /* cldoc:begin-category(sim.h) 
-* sim.h provides generators which can simulate a certain kind of data
+* sim.h provides generators which can simulate a certain kind of data.
 */
 
 #ifndef __TESTH_SIMULATORS__
