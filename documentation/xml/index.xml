@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
+<index xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <brief>TestH library documentation.</brief>
+  <doc># TestH library documentation.
+
+This documentation aims to support the understanding of the existing code.
+
+You can get the source code from [testH repository](https://github.com/cdgramos/testh) on github.</doc>
+  <category name="batt.h" ref="batt.h#batt.h">
+    <brief>batt.h provides batteries to compare various target hurst parameter values with the ones estimated for a defined generator.</brief>
+  </category>
+  <category name="proc.h" ref="proc.h#proc.h">
+    <brief>proc.h provides interfaces to manipulate processes.</brief>
+    <struct name="proc_Points" ref="proc.h::proc_Points#proc.h::proc_Points" />
+    <struct name="proc_Process" ref="proc.h::proc_Process#proc.h::proc_Process" />
+    <struct name="proc_Scales" ref="proc.h::proc_Scales#proc.h::proc_Scales" />
+    <struct name="proc_ScalesConfig" ref="proc.h::proc_ScalesConfig#proc.h::proc_ScalesConfig" />
+    <typedef name="tos" ref="proc.h::tos#proc.h::tos">
+      <type name="TestHTypeOfScale" ref="proc.h#proc.h::TestHTypeOfScale" />
+    </typedef>
+  </category>
+  <category name="gen.h" ref="gen.h#gen.h">
+    <brief>gen.h provides generators of self-similar sequences.</brief>
+    <typedef name="gen" ref="gen.h::gen#gen.h::gen">
+      <type name="TestHGenerator" ref="gen.h#gen.h::TestHGenerator" />
+    </typedef>
+  </category>
+  <category name="dist.h" ref="dist.h#dist.h">
+    <brief>dist.h provides probability distribution functions.</brief>
+    <typedef name="dist" ref="dist.h::dist#dist.h::dist">
+      <type name="TestHDistribution" ref="dist.h#dist.h::TestHDistribution" />
+    </typedef>
+  </category>
+  <category name="est.h" ref="est.h#est.h">
+    <brief>est.h provides estimators of the hurst parameter.</brief>
+  </category>
+  <category name="func.h" ref="func.h#func.h">
+    <brief>func.h provides mathematical functions.</brief>
+  </category>
+  <category name="io.h" ref="io.h#io.h">
+    <brief>io.h defines file handling and printing functions.</brief>
+  </category>
+  <category name="reg.h" ref="reg.h#reg.h">
+    <brief>reg.h defines regression analysis functions and data types.</brief>
+    <struct name="reg_Linear" ref="reg.h::reg_Linear#reg.h::reg_Linear">
+      <brief> reg_Linear Structure.</brief>
+    </struct>
+  </category>
+  <category name="rng.h" ref="rng.h#rng.h">
+    <brief>rng.h defines random number generator functions.</brief>
+  </category>
+  <category name="sim.h" ref="sim.h#sim.h">
+    <brief>sim.h provides generators which can simulate a certain kind of data.</brief>
+  </category>
+  <category name="stat.h" ref="stat.h#stat.h">
+    <brief>stat.h provides statistical functions.</brief>
+  </category>
+  <category name="util.h" ref="util.h#util.h">
+    <brief>defines general memory, time, sort and system functions.</brief>
+  </category>
+  <report name="Documentation generator" ref="report" />
+</index>

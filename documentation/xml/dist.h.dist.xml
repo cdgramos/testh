@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<typedef id="dist.h::dist" name="dist" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <type name="TestHDistribution" ref="dist.h#dist.h::TestHDistribution" />
+  <function id="dist_CDFProb" name="dist_CDFProb">
+    <brief> dist_CDFProb Function.</brief>
+    <doc>dist_CDFProb computes the Cumulative Destribution Function of distribution d..
+</doc>
+    <return>
+      <doc>the Cumulative Destribution Function value for a certain distribution d.</doc>
+      <type builtin="yes" name="double" />
+    </return>
+    <argument id="dist_CDFProb::d" name="d">
+      <doc>type of distribution.</doc>
+      <type name="dist" ref="dist.h::dist#dist.h::dist" />
+    </argument>
+    <argument id="dist_CDFProb::x" name="x">
+      <doc>input value for distribution functions.</doc>
+      <type builtin="yes" name="double" />
+    </argument>
+  </function>
+  <function id="dist_CheckDist" name="dist_CheckDist">
+    <brief> dist_CheckDist Function.</brief>
+    <doc>dist_CheckDist verifies if a certain given distribution value belongs to the existing distribution enumeration.
+</doc>
+    <return>
+      <doc>"OK" if the value belongs to the enumeration, otherwise returns "ERR".</doc>
+      <type builtin="yes" name="int" />
+    </return>
+    <argument id="dist_CheckDist::d" name="d">
+      <doc>is a distribution value to be checked if it is valid.</doc>
+      <type name="dist" ref="dist.h::dist#dist.h::dist" />
+    </argument>
+  </function>
+  <function id="dist_PDFProb" name="dist_PDFProb">
+    <brief> dist_PDFProb Function.</brief>
+    <doc>dist_PDFProb computes the Probability Density Function of distribution d..
+</doc>
+    <return>
+      <doc>the Probability Density Function value for a certain distribution d.</doc>
+      <type builtin="yes" name="double" />
+    </return>
+    <argument id="dist_PDFProb::d" name="d">
+      <doc>type of distribution.</doc>
+      <type name="dist" ref="dist.h::dist#dist.h::dist" />
+    </argument>
+    <argument id="dist_PDFProb::x" name="x">
+      <doc>input value for distribution functions.</doc>
+      <type builtin="yes" name="double" />
+    </argument>
+  </function>
+</typedef>

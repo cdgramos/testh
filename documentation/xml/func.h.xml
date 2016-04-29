@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<category id="func.h" name="func.h" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <brief>func.h provides mathematical functions.</brief>
+  <function id="func_gammq" name="func_gammq">
+    <brief> func_gammq Function.</brief>
+    <doc>func_gammq function calculates the complement of the incomplete gamma function.
+</doc>
+    <return>
+      <doc>the complementary incomplete gamma function.</doc>
+      <type builtin="yes" name="double" />
+    </return>
+    <argument id="func_gammq::a" name="a">
+      <doc>is a scalar containing the value of the exponential of the gamma function.</doc>
+      <type builtin="yes" name="double" />
+    </argument>
+    <argument id="func_gammq::x" name="x">
+      <doc>is a scalar containing the upper limit of the integral of the incomplete gamma function.</doc>
+      <type builtin="yes" name="double" />
+    </argument>
+  </function>
+  <function id="func_qsimp" name="func_qsimp">
+    <brief> func_qsimp Function.</brief>
+    <doc>func_qsimp function performs a numerical integration of a function func over a closed interval [a,b] using the Simpson's rule.
+</doc>
+    <return>
+      <doc>the integral of the function func from a to b.</doc>
+      <type builtin="yes" name="double" />
+    </return>
+    <argument id="func_qsimp::d" name="d">
+      <doc>is the type of distribution to be considered.</doc>
+      <type name="dist" ref="dist.h::dist#dist.h::dist" />
+    </argument>
+    <argument id="func_qsimp::a" name="a">
+      <doc>is the lower closed interval boundary.</doc>
+      <type builtin="yes" name="double" />
+    </argument>
+    <argument id="func_qsimp::b" name="b">
+      <doc>is the upper closed interval boundary.</doc>
+      <type builtin="yes" name="double" />
+    </argument>
+  </function>
+</category>

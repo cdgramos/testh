@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<typedef id="proc.h::tos" name="tos" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <type name="TestHTypeOfScale" ref="proc.h#proc.h::TestHTypeOfScale" />
+  <function id="proc_CreateScalesConfig" name="proc_CreateScalesConfig">
+    <return>
+      <type name="proc_ScalesConfig" qualifier="*" ref="proc.h::proc_ScalesConfig#proc.h::proc_ScalesConfig" />
+    </return>
+    <argument id="proc_CreateScalesConfig::scl" name="scl">
+      <type name="tos" ref="proc.h::tos#proc.h::tos" />
+    </argument>
+    <argument id="proc_CreateScalesConfig::min" name="min">
+      <type builtin="yes" name="int" />
+    </argument>
+    <argument id="proc_CreateScalesConfig::max" name="max">
+      <type builtin="yes" name="int" />
+    </argument>
+    <argument id="proc_CreateScalesConfig::mov" name="mov">
+      <type builtin="yes" name="int" />
+    </argument>
+  </function>
+</typedef>

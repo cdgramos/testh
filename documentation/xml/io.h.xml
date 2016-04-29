@@ -1,0 +1,260 @@
+<?xml version='1.0' encoding='utf-8'?>
+<category id="io.h" name="io.h" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <brief>io.h defines file handling and printing functions.</brief>
+  <variable id="io.h::TestHEstPrintH" name="TestHEstPrintH">
+    <type builtin="yes" name="int" />
+  </variable>
+  <variable id="io.h::TestHEstWrToFile" name="TestHEstWrToFile">
+    <type builtin="yes" name="int" />
+  </variable>
+  <variable id="io.h::TestHPrintHeader" name="TestHPrintHeader">
+    <type builtin="yes" name="int" />
+  </variable>
+  <variable id="io.h::TestHPrintMemCPU" name="TestHPrintMemCPU">
+    <type builtin="yes" name="int" />
+  </variable>
+  <variable id="io.h::TestHPrintPlain" name="TestHPrintPlain">
+    <type builtin="yes" name="int" />
+  </variable>
+  <variable id="io.h::TestHPrintSep" name="TestHPrintSep">
+    <type builtin="yes" name="int" />
+  </variable>
+  <variable id="io.h::TestHVerbosity" name="TestHVerbosity">
+    <type name="verb" ref="io.h#io.h::verb" />
+  </variable>
+  <enum anonymous="yes" id="io.h::TestHVerbosity" name="TestHVerbosity">
+    <brief> TestHVerbosity Enumeration.</brief>
+    <doc>TestHVerbosity defines the possible verbosity levels.</doc>
+    <enumvalue id="io.h::TestH_NONE" name="TestH_NONE" value="0">
+      <brief>The TestH_NONE is equivalent to value 0 and it is intended to hide all non critical messages.</brief>
+    </enumvalue>
+    <enumvalue id="io.h::TestH_LOW" name="TestH_LOW" value="1">
+      <brief>The TestH_LOW is equivalent to value 1 and it represents a low level of verbosity.</brief>
+    </enumvalue>
+    <enumvalue id="io.h::TestH_MEDIUM" name="TestH_MEDIUM" value="2">
+      <brief>The TestH_MEDIUM is equivalent to value 2 and it represents a medium level of verbosity.</brief>
+    </enumvalue>
+    <enumvalue id="io.h::TestH_HIGH" name="TestH_HIGH" value="3">
+      <brief>The TestH_HIGH is equivalent to value 3 and it represents a high level of verbosity.</brief>
+    </enumvalue>
+  </enum>
+  <typedef id="io.h::verb" name="verb">
+    <type name="TestHVerbosity" ref="io.h#io.h::TestHVerbosity" />
+  </typedef>
+  <function id="io_CheckH" name="io_CheckH">
+    <brief> io_CheckH Function.</brief>
+    <doc>io_CheckH verifies if a certain given number is in the range of values of the Hurst Exponent.
+</doc>
+    <return>
+      <doc>"ERR" if h &amp;lt; 0.0 || h &amp;gt;= 1.0 otherwise returns "OK".</doc>
+      <type builtin="yes" name="int" />
+    </return>
+    <argument id="io_CheckH::h" name="h">
+      <doc>hurst exponent value to be checked.</doc>
+      <type builtin="yes" name="double" />
+    </argument>
+  </function>
+  <function id="io_CheckPowerOf" name="io_CheckPowerOf">
+    <brief> io_CheckPowerOf Function.</brief>
+    <doc>io_CheckPowerOf verifies is a given integer is a power of a given value.
+Prints error message if parameters are invalid.
+</doc>
+    <return>
+      <doc>return "OK" if the given number is a power of the given exponent, otherwise return 0.</doc>
+      <type builtin="yes" name="int" />
+    </return>
+    <argument id="io_CheckPowerOf::num" name="num">
+      <doc>value to be checked.</doc>
+      <type builtin="yes" name="int" />
+    </argument>
+    <argument id="io_CheckPowerOf::exp" name="exp">
+      <doc>exponent to be checked.</doc>
+      <type builtin="yes" name="int" />
+    </argument>
+  </function>
+  <function id="io_CheckPowerOfTwo" name="io_CheckPowerOfTwo">
+    <brief> io_CheckPowerOfTwo Function.</brief>
+    <doc>verifies if a given integer is a power of two.
+</doc>
+    <return>
+      <doc>return 1 if the given value is a power of two, otherwise returns 0.</doc>
+      <type builtin="yes" name="int" />
+    </return>
+    <argument id="io_CheckPowerOfTwo::num" name="num">
+      <doc>value to be checked.</doc>
+      <type builtin="yes" name="int" />
+    </argument>
+  </function>
+  <function id="io_FileClean" name="io_FileClean">
+    <brief> io_FileClean Function.</brief>
+    <doc>io_FileClean deletes the content of a file. Creates a new file if it do not exist.</doc>
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="io_FileClean::path" name="path">
+      <doc>is the string which contains the path to the file.</doc>
+      <type builtin="yes" name="char" qualifier=" const *" />
+    </argument>
+  </function>
+  <function id="io_FileClose" name="io_FileClose">
+    <brief> io_FileClose Function.</brief>
+    <doc>io_FileClose close a file. Prints na error message if it fails.</doc>
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="io_FileClose::path" name="path">
+      <doc>is the string which contains the path to the file.</doc>
+      <type builtin="yes" name="char" qualifier=" const *" />
+    </argument>
+    <argument id="io_FileClose::f" name="f">
+      <doc>is theFILE pointer which we want to free.</doc>
+      <type name="FILE" qualifier="*" />
+    </argument>
+  </function>
+  <function id="io_FileColumns" name="io_FileColumns">
+    <return>
+      <type builtin="yes" name="int" />
+    </return>
+    <argument id="io_FileColumns::f" name="f">
+      <type name="FILE" qualifier="*" />
+    </argument>
+  </function>
+  <function id="io_FileGetNum" name="io_FileGetNum">
+    <return>
+      <type builtin="yes" name="int" />
+    </return>
+    <argument id="io_FileGetNum::f" name="f">
+      <type name="FILE" qualifier="*" />
+    </argument>
+    <argument id="io_FileGetNum::p" name="p">
+      <type builtin="yes" name="double" qualifier="*" />
+    </argument>
+    <argument id="io_FileGetNum::g" name="g">
+      <type name="gen" ref="gen.h::gen#gen.h::gen" />
+    </argument>
+  </function>
+  <function id="io_FileLines" name="io_FileLines">
+    <brief> io_FileLines Function.</brief>
+    <doc>io_FileLines counts the number of rows in a given file. Prients na error message if the FILE pointer is invalid.
+</doc>
+    <return>
+      <doc>number of lines in a given file.</doc>
+      <type builtin="yes" name="int" />
+    </return>
+    <argument id="io_FileLines::f" name="f">
+      <doc>is the FILE pointer from which we want to count the rows.</doc>
+      <type name="FILE" qualifier="*" />
+    </argument>
+  </function>
+  <function id="io_FileOpen" name="io_FileOpen">
+    <brief> io_FileOpen Function.</brief>
+    <doc>io_FileOpen open a file. Prints na error message if it fails.
+</doc>
+    <return>
+      <doc>return the pointer to the file stream if successful, otherwise returns NULL.</doc>
+      <type name="FILE" qualifier="*" />
+    </return>
+    <argument id="io_FileOpen::path" name="path">
+      <doc>is the string which contains the path to the file.</doc>
+      <type builtin="yes" name="char" qualifier=" const *" />
+    </argument>
+    <argument id="io_FileOpen::mode" name="mode">
+      <doc>indicates in which mode a file should be opened.</doc>
+      <type builtin="yes" name="char" qualifier=" const *" />
+    </argument>
+  </function>
+  <function id="io_FileWr" name="io_FileWr">
+    <brief> io_FileWr Function.</brief>
+    <doc>io_FileWr writes 2 double values to a file using the format "%lf %lf\n".</doc>
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="io_FileWr::path" name="path">
+      <doc>is the string which contains the path to the file.</doc>
+      <type builtin="yes" name="char" qualifier=" const *" />
+    </argument>
+    <argument id="io_FileWr::mode" name="mode">
+      <doc>indicates in which mode a file should be opened.</doc>
+      <type builtin="yes" name="char" qualifier=" const *" />
+    </argument>
+    <argument id="io_FileWr::d1" name="d1">
+      <doc>is the first double value to be written.</doc>
+      <type builtin="yes" name="double" qualifier=" const" />
+    </argument>
+    <argument id="io_FileWr::d2" name="d2">
+      <doc>is the second double value to be written.</doc>
+      <type builtin="yes" name="double" qualifier=" const" />
+    </argument>
+  </function>
+  <function id="io_PrintDone" name="io_PrintDone">
+    <brief> io_PrintDone Function.</brief>
+    <doc>io_PrintDone prints to the standard output the executed commands, host name, user name,
+current working directory and the relative path to the directory of the generated executable.</doc>
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+  </function>
+  <function id="io_PrintErr" name="io_PrintErr">
+    <brief> io_PrintErr Function.</brief>
+    <doc>io_PrintErr prints to the standard output an error message and it's details. The program exit
+after this.
+</doc>
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="io_PrintErr::err" name="err">
+      <doc>error number.</doc>
+      <type builtin="yes" name="int" qualifier=" const" />
+    </argument>
+    <argument id="io_PrintErr::format" name="format">
+      <doc>error information, accept multiple parameters.</doc>
+      <type builtin="yes" name="char" qualifier=" const *" />
+    </argument>
+  </function>
+  <function id="io_PrintError" name="io_PrintError">
+    <brief> io_PrintError Function.</brief>
+    <doc>io_PrintError prints to the standard output an error message and it's details. The program continues
+after this.</doc>
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="io_PrintError::err" name="err">
+      <doc>error number.</doc>
+      <type builtin="yes" name="int" qualifier=" const" />
+    </argument>
+    <argument id="io_PrintError::format" name="format">
+      <doc>error information, accept multiple parameters.</doc>
+      <type builtin="yes" name="char" qualifier=" const *" />
+    </argument>
+  </function>
+  <function id="io_PrintInit" name="io_PrintInit">
+    <brief> io_PrintInit Function.</brief>
+    <doc>io_PrintInit prints to the standard output the executed commands, host name, user name,
+current working directory and the relative path to the directory of the generated executable.</doc>
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="io_PrintInit::params" name="params">
+      <doc>executed comands.</doc>
+      <type builtin="yes" name="char" qualifier=" const *" />
+    </argument>
+    <argument id="io_PrintInit::argv" name="argv">
+      <doc>relative path to the directory where the executable have been generated.</doc>
+      <type builtin="yes" name="char" qualifier=" const *" />
+    </argument>
+  </function>
+  <function id="io_PrintSep" name="io_PrintSep">
+    <brief> io_PrintSep Function.</brief>
+    <doc>io_PrintSep prints to the standard output a message indicating that a process is done.</doc>
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+  </function>
+  <function id="io_PrintTestH" name="io_PrintTestH">
+    <brief> io_PrintTestH Function.</brief>
+    <doc>io_PrintTestH prints to the standard output the TestH API summary.</doc>
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+  </function>
+</category>

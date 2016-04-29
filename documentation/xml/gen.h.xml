@@ -1,0 +1,219 @@
+<?xml version='1.0' encoding='utf-8'?>
+<category id="gen.h" name="gen.h" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <brief>gen.h provides generators of self-similar sequences.</brief>
+  <enum anonymous="yes" id="gen.h::TestHGenerator" name="TestHGenerator">
+    <brief> TestHGenerator Enumeration.</brief>
+    <doc>TestHGenerator defines the available self-similar sequence generators.</doc>
+    <enumvalue id="gen.h::TestH_EG" name="TestH_EG" value="-1">
+      <brief>Extern Generator.</brief>
+    </enumvalue>
+    <enumvalue id="gen.h::TestH_RF" name="TestH_RF" value="-2">
+      <brief>Read File.</brief>
+    </enumvalue>
+    <enumvalue id="gen.h::TestH_RFM" name="TestH_RFM" value="-3">
+      <brief>Read File Matrix.</brief>
+    </enumvalue>
+    <enumvalue id="gen.h::TestH_RFT" name="TestH_RFT" value="-4">
+      <brief>Read File Time.</brief>
+    </enumvalue>
+    <enumvalue id="gen.h::TestH_RFTA" name="TestH_RFTA" value="-5">
+      <brief>Read File Time Aggregated.</brief>
+    </enumvalue>
+    <enumvalue id="gen.h::TestH_Gaussian" name="TestH_Gaussian" value="0">
+      <brief>Gaussian.</brief>
+    </enumvalue>
+    <enumvalue id="gen.h::TestH_AR" name="TestH_AR" value="1">
+      <brief>Aggregation Renewals.</brief>
+    </enumvalue>
+    <enumvalue id="gen.h::TestH_fBmSGA" name="TestH_fBmSGA" value="2">
+      <brief>Fractional Brownian Motion Sequenctial Generation Algorithm.</brief>
+    </enumvalue>
+    <enumvalue id="gen.h::TestH_3SPG" name="TestH_3SPG" value="3">
+      <brief>Simple Self Similar Process Generator.</brief>
+    </enumvalue>
+    <enumvalue id="gen.h::TestH_Hosk" name="TestH_Hosk" value="4">
+      <brief>Hosking.</brief>
+    </enumvalue>
+    <enumvalue id="gen.h::TestH_Pax" name="TestH_Pax" value="5">
+      <brief>Paxson.</brief>
+    </enumvalue>
+  </enum>
+  <typedef name="gen" ref="gen.h::gen#gen.h::gen">
+    <type name="TestHGenerator" ref="gen.h#gen.h::TestHGenerator" />
+  </typedef>
+  <function id="gen_AggRenewal" name="gen_AggRenewal">
+    <return>
+      <type name="proc_Process" qualifier="*" ref="proc.h::proc_Process#proc.h::proc_Process" />
+    </return>
+    <argument id="gen_AggRenewal::N" name="N">
+      <type builtin="yes" name="int" />
+    </argument>
+    <argument id="gen_AggRenewal::h" name="h">
+      <type builtin="yes" name="double" />
+    </argument>
+    <argument id="gen_AggRenewal::ren" name="ren">
+      <type builtin="yes" name="int" />
+    </argument>
+    <argument id="gen_AggRenewal::xm" name="xm">
+      <type builtin="yes" name="int" />
+    </argument>
+    <argument id="gen_AggRenewal::sig" name="sig">
+      <type name="tosig" ref="proc.h#proc.h::tosig" />
+    </argument>
+  </function>
+  <function id="gen_ExternGen" name="gen_ExternGen">
+    <return>
+      <type name="proc_Process" qualifier="*" ref="proc.h::proc_Process#proc.h::proc_Process" />
+    </return>
+    <argument id="gen_ExternGen::N" name="N">
+      <type builtin="yes" name="int" />
+    </argument>
+    <argument id="gen_ExternGen::name" name="name">
+      <type builtin="yes" name="char" qualifier="*" />
+    </argument>
+    <argument id="gen_ExternGen::gen_func" name="gen_func">
+      <type class="function" qualifier="*">
+        <result>
+          <type builtin="yes" name="double" />
+        </result>
+        <arguments />
+      </type>
+    </argument>
+    <argument id="gen_ExternGen::sign" name="sign">
+      <type name="tosig" ref="proc.h#proc.h::tosig" />
+    </argument>
+  </function>
+  <function id="gen_fBmSequentialGenerationAlgorithm" name="gen_fBmSequentialGenerationAlgorithm">
+    <return>
+      <type name="proc_Process" qualifier="*" ref="proc.h::proc_Process#proc.h::proc_Process" />
+    </return>
+    <argument id="gen_fBmSequentialGenerationAlgorithm::N" name="N">
+      <type builtin="yes" name="int" />
+    </argument>
+    <argument id="gen_fBmSequentialGenerationAlgorithm::h" name="h">
+      <type builtin="yes" name="double" />
+    </argument>
+    <argument id="gen_fBmSequentialGenerationAlgorithm::scale_no" name="scale_no">
+      <type builtin="yes" name="int" />
+    </argument>
+    <argument id="gen_fBmSequentialGenerationAlgorithm::sig" name="sig">
+      <type name="tosig" ref="proc.h#proc.h::tosig" />
+    </argument>
+  </function>
+  <function id="gen_Gaussian" name="gen_Gaussian">
+    <brief> gen_Gaussian Function.</brief>
+    <doc>gen_Gaussian function generates a time serie using the Gaussian algorithm.
+</doc>
+    <return>
+      <doc>a proc_Process with a generated time series of size N and with a hurst value of approximately 0.50.</doc>
+      <type name="proc_Process" qualifier="*" ref="proc.h::proc_Process#proc.h::proc_Process" />
+    </return>
+    <argument id="gen_Gaussian::N" name="N">
+      <doc>scalar defining the number of desired points to be generated.</doc>
+      <type builtin="yes" name="int" />
+    </argument>
+    <argument id="gen_Gaussian::sig" name="sig">
+      <doc>is the type of signal we want to use.</doc>
+      <type name="tosig" ref="proc.h#proc.h::tosig" />
+    </argument>
+  </function>
+  <function id="gen_Hosking" name="gen_Hosking">
+    <brief> gen_Hosking Function.</brief>
+    <doc>gen_Hosking function generates a self similar time serie using the Hosking algorithm.
+</doc>
+    <return>
+      <doc>a proc_Process with a generated time series of size N and with a hurst value of h.</doc>
+      <type name="proc_Process" qualifier="*" ref="proc.h::proc_Process#proc.h::proc_Process" />
+    </return>
+    <argument id="gen_Hosking::N" name="N">
+      <doc>scalar defining the number of desired points to be generated.</doc>
+      <type builtin="yes" name="int" />
+    </argument>
+    <argument id="gen_Hosking::h" name="h">
+      <doc>target hurst value of the generated time series.</doc>
+      <type builtin="yes" name="double" />
+    </argument>
+    <argument id="gen_Hosking::sig" name="sig">
+      <doc>is the type of signal we want to use.</doc>
+      <type name="tosig" ref="proc.h#proc.h::tosig" />
+    </argument>
+  </function>
+  <function id="gen_Paxson" name="gen_Paxson">
+    <brief> gen_Paxson Function.</brief>
+    <doc>gen_Paxson function generates a self similar time serie using the gen_Paxson algorithm.
+</doc>
+    <return>
+      <doc>a proc_Process with a generated time series of size N and with a hurst value of h.</doc>
+      <type name="proc_Process" qualifier="*" ref="proc.h::proc_Process#proc.h::proc_Process" />
+    </return>
+    <argument id="gen_Paxson::N" name="N">
+      <doc>scalar defining the number of desired points to be generated.</doc>
+      <type builtin="yes" name="int" />
+    </argument>
+    <argument id="gen_Paxson::h" name="h">
+      <doc>target hurst value of the generated time series.</doc>
+      <type builtin="yes" name="double" />
+    </argument>
+    <argument id="gen_Paxson::sig" name="sig">
+      <doc>type of signal to be used.</doc>
+      <type name="tosig" ref="proc.h#proc.h::tosig" />
+    </argument>
+  </function>
+  <function id="gen_ReadFile" name="gen_ReadFile">
+    <brief> gen_ReadFile Function.</brief>
+    <doc>gen_ReadFile function reads a set of points from a file and return it as a process.
+</doc>
+    <return>
+      <doc>a proc_Process with a time series readen from a file.</doc>
+      <type name="proc_Process" qualifier="*" ref="proc.h::proc_Process#proc.h::proc_Process" />
+    </return>
+    <argument id="gen_ReadFile::path" name="path">
+      <doc>path and file name.</doc>
+      <type builtin="yes" name="char" qualifier=" const *" />
+    </argument>
+    <argument id="gen_ReadFile::name" name="name">
+      <doc>desired process name (e.g. Hosking, Paxson, ...).</doc>
+      <type builtin="yes" name="char" qualifier=" const *" />
+    </argument>
+    <argument id="gen_ReadFile::sig" name="sig">
+      <doc>is the type of signal we want to use.</doc>
+      <type name="tosig" ref="proc.h#proc.h::tosig" />
+    </argument>
+  </function>
+  <function id="gen_ReadFileMatrix" name="gen_ReadFileMatrix">
+    <return>
+      <type name="proc_Process" qualifier="*" ref="proc.h::proc_Process#proc.h::proc_Process" />
+    </return>
+    <argument id="gen_ReadFileMatrix::path" name="path">
+      <type builtin="yes" name="char" qualifier=" const *" />
+    </argument>
+    <argument id="gen_ReadFileMatrix::name" name="name">
+      <type builtin="yes" name="char" qualifier=" const *" />
+    </argument>
+    <argument id="gen_ReadFileMatrix::sig" name="sig">
+      <type name="tosig" ref="proc.h#proc.h::tosig" />
+    </argument>
+  </function>
+  <function id="gen_ReadFileTime" name="gen_ReadFileTime">
+    <return>
+      <type name="proc_Process" qualifier="*" ref="proc.h::proc_Process#proc.h::proc_Process" />
+    </return>
+    <argument id="gen_ReadFileTime::path" name="path">
+      <type builtin="yes" name="char" qualifier=" const *" />
+    </argument>
+    <argument id="gen_ReadFileTime::name" name="name">
+      <type builtin="yes" name="char" qualifier=" const *" />
+    </argument>
+    <argument id="gen_ReadFileTime::sig" name="sig">
+      <type name="tosig" ref="proc.h#proc.h::tosig" />
+    </argument>
+    <argument id="gen_ReadFileTime::mult" name="mult">
+      <type builtin="yes" name="int" />
+    </argument>
+  </function>
+  <function id="gen_SimpleSelfSimilarProcessGenerator" name="gen_SimpleSelfSimilarProcessGenerator">
+    <return>
+      <type name="proc_Process" qualifier="*" ref="proc.h::proc_Process#proc.h::proc_Process" />
+    </return>
+  </function>
+</category>

@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<category id="rng.h" name="rng.h" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <brief>rng.h defines random number generator functions.</brief>
+  <function id="rng_MT19937_genrand" name="rng_MT19937_genrand">
+    <brief> rng_MT19937_genrand function.</brief>
+    <doc>rng_MT19937_genrand random number generator using the standard Mersenne Twister algorithm.
+</doc>
+    <return>
+      <doc>returns a random double value.</doc>
+      <type builtin="yes" name="double" />
+    </return>
+  </function>
+  <function id="rng_MT19937_sgenrand" name="rng_MT19937_sgenrand">
+    <brief> rng_MT19937_sgenrand function.</brief>
+    <doc>rng_MT19937_sgenrand defines a seed for the random number generator function "rng_MT19937_genrand".</doc>
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+  </function>
+</category>

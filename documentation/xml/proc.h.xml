@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='utf-8'?>
+<category id="proc.h" name="proc.h" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <brief>proc.h provides interfaces to manipulate processes.</brief>
+  <struct name="proc_Points" ref="proc.h::proc_Points#proc.h::proc_Points" />
+  <struct name="proc_Process" ref="proc.h::proc_Process#proc.h::proc_Process" />
+  <struct name="proc_Scales" ref="proc.h::proc_Scales#proc.h::proc_Scales" />
+  <struct name="proc_ScalesConfig" ref="proc.h::proc_ScalesConfig#proc.h::proc_ScalesConfig" />
+  <enum anonymous="yes" id="proc.h::TestHTypeOfScale" name="TestHTypeOfScale">
+    <brief> TestHTypeOfScale Enumeration.</brief>
+    <doc>TestHTypeOfScale defines the possible types of scale.</doc>
+    <enumvalue id="proc.h::TestH_INC" name="TestH_INC" value="1">
+      <brief>The TestH_INC is equivalent to value 1 and it represents an Incremental type of scale.</brief>
+    </enumvalue>
+    <enumvalue id="proc.h::TestH_RAND" name="TestH_RAND" value="2">
+      <brief>The TestH_RAND is equivalent to value 2 and it represents a Random type of scale.</brief>
+    </enumvalue>
+    <enumvalue id="proc.h::TestH_POW" name="TestH_POW" value="3">
+      <brief>The TestH_POW is equivalent to value 3 and it represents a Potency type of scale.</brief>
+    </enumvalue>
+  </enum>
+  <enum anonymous="yes" id="proc.h::TestHTypeOfSignal" name="TestHTypeOfSignal">
+    <brief> TestHTypeOfSignal Enumeration.</brief>
+    <doc>TestHTypeOfSignal defines the possible types of signal.</doc>
+    <enumvalue id="proc.h::TestH_fGn" name="TestH_fGn" value="1">
+      <brief>The TestH_fGn is equivalent to value 1 and it represents the Fractional Gaussioan Noise.</brief>
+    </enumvalue>
+    <enumvalue id="proc.h::TestH_fBm" name="TestH_fBm" value="2">
+      <brief>The TestH_fBm is equivalent to value 2 and it represents the Fractional Brownian Motion.</brief>
+    </enumvalue>
+  </enum>
+  <typedef name="tos" ref="proc.h::tos#proc.h::tos">
+    <type name="TestHTypeOfScale" ref="proc.h#proc.h::TestHTypeOfScale" />
+  </typedef>
+  <typedef id="proc.h::tosig" name="tosig">
+    <type name="TestHTypeOfSignal" ref="proc.h#proc.h::TestHTypeOfSignal" />
+  </typedef>
+  <function id="proc_CreatePoints" name="proc_CreatePoints">
+    <return>
+      <type name="proc_Points" qualifier="*" ref="proc.h::proc_Points#proc.h::proc_Points" />
+    </return>
+    <argument id="proc_CreatePoints::p" name="p">
+      <type builtin="yes" name="double" qualifier="*" />
+    </argument>
+    <argument id="proc_CreatePoints::t" name="t">
+      <type builtin="yes" name="double" qualifier="*" />
+    </argument>
+    <argument id="proc_CreatePoints::size" name="size">
+      <type builtin="yes" name="int" />
+    </argument>
+    <argument id="proc_CreatePoints::scale" name="scale">
+      <type builtin="yes" name="int" />
+    </argument>
+    <argument id="proc_CreatePoints::sig" name="sig">
+      <type name="tosig" ref="proc.h#proc.h::tosig" />
+    </argument>
+  </function>
+  <function id="proc_CreateProcess" name="proc_CreateProcess">
+    <return>
+      <type name="proc_Process" qualifier="*" ref="proc.h::proc_Process#proc.h::proc_Process" />
+    </return>
+    <argument id="proc_CreateProcess::n" name="n">
+      <type builtin="yes" name="char" qualifier=" const *" />
+    </argument>
+    <argument id="proc_CreateProcess::p" name="p">
+      <type builtin="yes" name="double" qualifier="*" />
+    </argument>
+    <argument id="proc_CreateProcess::t" name="t">
+      <type builtin="yes" name="double" qualifier="*" />
+    </argument>
+    <argument id="proc_CreateProcess::s" name="s">
+      <type builtin="yes" name="int" />
+    </argument>
+    <argument id="proc_CreateProcess::sig" name="sig">
+      <type name="tosig" ref="proc.h#proc.h::tosig" />
+    </argument>
+  </function>
+</category>
