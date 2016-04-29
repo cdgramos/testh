@@ -8,6 +8,42 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+
+
+    <style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+    border-right:1px solid #bbb;
+}
+
+li:last-child {
+    border-right: none;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+</style>
   </head>
   <body>
     <section class="page-header">
@@ -21,6 +57,15 @@
     <section class="main-content">
       <h1>
 <a id="the-library" class="anchor" href="#the-library" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The Library</h1>
+
+<ul>
+    <li><a class="active" href="index.html">TestH</a></li>
+    <li><a href="#">Examples</a></li>
+    <li><a href="#">Contributors</a></li>
+    <li><a href="#">Resources</a></li>
+    <li style="float:right"><a href="#">Documentation</a></li>
+</ul>
+
 
 <p>TestH is an ANSI C library implementing several pseudo-random number generators (PRNGs) for self-similar sequences and several Hurst parameter estimators (also known as the Hurst exponent) described in the literature. It is an on-going research and development project, whose main objective is to provide researchers with the means to estimate the Hurst parameter and to generate sequences with the self-similarity property embedded in the data. It represents an effort to integrate the different methods in a normalized and comprehensive manner in a single software package, which is not found in other tools.</p>
 
@@ -38,23 +83,6 @@
 <a id="contacts" class="anchor" href="#contacts" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contacts</h1>
 
 <p>You can reach us via e-mail at...</p>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="menu">
-        <ul>
-          <li><a href="index.html">TestH</a></li>
-          <li><a href="#">Examples</a></li>
-          <li><a href="#">Contributors</a></li>
-          <li><a href="#">Resources</a></li>
-          <li><a href="#">Documentation</a></li>
-        </ul>
-      </section>
-      <section id="main_content" class="inner">
-        {{ content }}
-      </section>
-    </div>
-
 
 
       <footer class="site-footer">
