@@ -5,8 +5,15 @@
 #ifndef __TESTH_REGRESSION__
 #define __TESTH_REGRESSION__
 
+/* reg_Linear Structure.
+ *
+ * reg_Linear is used to store the values needed for the linear regression line equation.
+ * @return reg_Linear data type.
+*/
 typedef struct {
+    // m is the y-interception. 
 	double m;
+	// b is the slope.
 	double b;
 } reg_Linear;
 

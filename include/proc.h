@@ -5,14 +5,27 @@
 #ifndef __TESTH_PROCESS__
 #define __TESTH_PROCESS__
 
+/* TestHTypeOfSignal Enumeration.
+ *
+ * TestHTypeOfSignal defines the possible types of signal.
+*/
 enum TestHTypeOfSignal { 
+	// The TestH_fGn is equivalent to value 1 and it represents the Fractional Gaussioan Noise.
 	TestH_fGn 	= 0x1,
+	// The TestH_fBm is equivalent to value 2 and it represents the Fractional Brownian Motion.
 	TestH_fBm 	= 0x2
 };
 
+/* TestHTypeOfScale Enumeration.
+ *
+ * TestHTypeOfScale defines the possible types of scale.
+*/
 enum TestHTypeOfScale {
+	// The TestH_INC is equivalent to value 1 and it represents an Incremental type of scale.
 	TestH_INC	= 0x1,
+	// The TestH_RAND is equivalent to value 2 and it represents a Random type of scale.
 	TestH_RAND	= 0x2,
+	// The TestH_POW is equivalent to value 3 and it represents a Potency type of scale.
 	TestH_POW	= 0x3
 };
 

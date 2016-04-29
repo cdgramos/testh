@@ -2,33 +2,55 @@
 <category id="est.h" name="est.h" xmlns="http://jessevdk.github.com/cldoc/1.0">
   <brief>est.h provides estimators of the hurst parameter.</brief>
   <enum anonymous="yes" id="est.h::TestHEstimator" name="TestHEstimator">
-    <enumvalue id="est.h::TestH_RS" name="TestH_RS" value="1" />
-    <enumvalue id="est.h::TestH_VT" name="TestH_VT" value="2" />
-    <enumvalue id="est.h::TestH_AMT" name="TestH_AMT" value="3" />
-    <enumvalue id="est.h::TestH_EBP" name="TestH_EBP" value="4" />
+    <brief> TestHEstimator Enumeration.</brief>
+    <doc>TestHEstimator defines the available estimators.</doc>
+    <enumvalue id="est.h::TestH_RS" name="TestH_RS" value="1">
+      <brief>Rescaled Range Statistics.</brief>
+    </enumvalue>
+    <enumvalue id="est.h::TestH_VT" name="TestH_VT" value="2">
+      <brief>Variance Time.</brief>
+    </enumvalue>
+    <enumvalue id="est.h::TestH_AMT" name="TestH_AMT" value="3">
+      <brief>Absolute Moments Time.</brief>
+    </enumvalue>
+    <enumvalue id="est.h::TestH_EBP" name="TestH_EBP" value="4">
+      <brief>Embedded Branching Process.</brief>
+    </enumvalue>
   </enum>
   <typedef id="est.h::est" name="est">
     <type name="TestHEstimator" ref="est.h#est.h::TestHEstimator" />
   </typedef>
   <function id="est_AbsoluteMomentsTime" name="est_AbsoluteMomentsTime">
+    <brief> est_AbsoluteMomentsTime Function.</brief>
+    <doc>est_AbsoluteMomentsTime implements the Absolute Moments Time (AMT) algorithm, and for a given process it returns the computed hurst parameter.
+</doc>
     <return>
+      <doc>the hurst parameter for a given process.</doc>
       <type builtin="yes" name="void" />
     </return>
     <argument id="est_AbsoluteMomentsTime::pr" name="pr">
+      <doc>pointer to a given process.</doc>
       <type name="proc_Process" qualifier="*" ref="proc.h::proc_Process#proc.h::proc_Process" />
     </argument>
     <argument id="est_AbsoluteMomentsTime::mom" name="mom">
+      <doc>number of absolute moments.</doc>
       <type builtin="yes" name="int" />
     </argument>
   </function>
   <function id="est_EmbeddedBranchingProcess" name="est_EmbeddedBranchingProcess">
+    <brief> est_EmbeddedBranchingProcess Function.</brief>
+    <doc>est_EmbeddedBranchingProcess implements the Embedded Branching Process (EBP) algorithm, and for a given process it returns the computed hurst parameter.
+</doc>
     <return>
+      <doc>the hurst parameter for a given process.</doc>
       <type builtin="yes" name="void" />
     </return>
     <argument id="est_EmbeddedBranchingProcess::pr" name="pr">
+      <doc>is a pointer to a given process.</doc>
       <type name="proc_Process" qualifier="*" ref="proc.h::proc_Process#proc.h::proc_Process" />
     </argument>
     <argument id="est_EmbeddedBranchingProcess::K" name="K">
+      <doc>maximum number of crossing levels.</doc>
       <type builtin="yes" name="int" />
     </argument>
   </function>
@@ -41,7 +63,7 @@
       <type builtin="yes" name="double" />
     </return>
     <argument id="est_RescaledRangeStatistics::pr" name="pr">
-      <doc>is a pointer to a given process.</doc>
+      <doc>pointer to a given process.</doc>
       <type name="proc_Process" qualifier="*" ref="proc.h::proc_Process#proc.h::proc_Process" />
     </argument>
   </function>
@@ -54,7 +76,7 @@
       <type builtin="yes" name="double" />
     </return>
     <argument id="est_VarianceTime::pr" name="pr">
-      <doc>is a pointer to a given process.</doc>
+      <doc>pointer to a given process.</doc>
       <type name="proc_Process" qualifier="*" ref="proc.h::proc_Process#proc.h::proc_Process" />
     </argument>
   </function>

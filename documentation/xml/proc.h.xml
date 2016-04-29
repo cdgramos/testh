@@ -6,13 +6,27 @@
   <struct name="proc_Scales" ref="proc.h::proc_Scales#proc.h::proc_Scales" />
   <struct name="proc_ScalesConfig" ref="proc.h::proc_ScalesConfig#proc.h::proc_ScalesConfig" />
   <enum anonymous="yes" id="proc.h::TestHTypeOfScale" name="TestHTypeOfScale">
-    <enumvalue id="proc.h::TestH_INC" name="TestH_INC" value="1" />
-    <enumvalue id="proc.h::TestH_RAND" name="TestH_RAND" value="2" />
-    <enumvalue id="proc.h::TestH_POW" name="TestH_POW" value="3" />
+    <brief> TestHTypeOfScale Enumeration.</brief>
+    <doc>TestHTypeOfScale defines the possible types of scale.</doc>
+    <enumvalue id="proc.h::TestH_INC" name="TestH_INC" value="1">
+      <brief>The TestH_INC is equivalent to value 1 and it represents an Incremental type of scale.</brief>
+    </enumvalue>
+    <enumvalue id="proc.h::TestH_RAND" name="TestH_RAND" value="2">
+      <brief>The TestH_RAND is equivalent to value 2 and it represents a Random type of scale.</brief>
+    </enumvalue>
+    <enumvalue id="proc.h::TestH_POW" name="TestH_POW" value="3">
+      <brief>The TestH_POW is equivalent to value 3 and it represents a Potency type of scale.</brief>
+    </enumvalue>
   </enum>
   <enum anonymous="yes" id="proc.h::TestHTypeOfSignal" name="TestHTypeOfSignal">
-    <enumvalue id="proc.h::TestH_fGn" name="TestH_fGn" value="1" />
-    <enumvalue id="proc.h::TestH_fBm" name="TestH_fBm" value="2" />
+    <brief> TestHTypeOfSignal Enumeration.</brief>
+    <doc>TestHTypeOfSignal defines the possible types of signal.</doc>
+    <enumvalue id="proc.h::TestH_fGn" name="TestH_fGn" value="1">
+      <brief>The TestH_fGn is equivalent to value 1 and it represents the Fractional Gaussioan Noise.</brief>
+    </enumvalue>
+    <enumvalue id="proc.h::TestH_fBm" name="TestH_fBm" value="2">
+      <brief>The TestH_fBm is equivalent to value 2 and it represents the Fractional Brownian Motion.</brief>
+    </enumvalue>
   </enum>
   <typedef name="tos" ref="proc.h::tos#proc.h::tos">
     <type name="TestHTypeOfScale" ref="proc.h#proc.h::TestHTypeOfScale" />

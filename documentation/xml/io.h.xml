@@ -23,10 +23,20 @@
     <type name="verb" ref="io.h#io.h::verb" />
   </variable>
   <enum anonymous="yes" id="io.h::TestHVerbosity" name="TestHVerbosity">
-    <enumvalue id="io.h::TestH_NONE" name="TestH_NONE" value="0" />
-    <enumvalue id="io.h::TestH_LOW" name="TestH_LOW" value="1" />
-    <enumvalue id="io.h::TestH_MEDIUM" name="TestH_MEDIUM" value="2" />
-    <enumvalue id="io.h::TestH_HIGH" name="TestH_HIGH" value="3" />
+    <brief> TestHVerbosity Enumeration.</brief>
+    <doc>TestHVerbosity defines the possible verbosity levels.</doc>
+    <enumvalue id="io.h::TestH_NONE" name="TestH_NONE" value="0">
+      <brief>The TestH_NONE is equivalent to value 0 and it is intended to hide all non critical messages.</brief>
+    </enumvalue>
+    <enumvalue id="io.h::TestH_LOW" name="TestH_LOW" value="1">
+      <brief>The TestH_LOW is equivalent to value 1 and it represents a low level of verbosity.</brief>
+    </enumvalue>
+    <enumvalue id="io.h::TestH_MEDIUM" name="TestH_MEDIUM" value="2">
+      <brief>The TestH_MEDIUM is equivalent to value 2 and it represents a medium level of verbosity.</brief>
+    </enumvalue>
+    <enumvalue id="io.h::TestH_HIGH" name="TestH_HIGH" value="3">
+      <brief>The TestH_HIGH is equivalent to value 3 and it represents a high level of verbosity.</brief>
+    </enumvalue>
   </enum>
   <typedef id="io.h::verb" name="verb">
     <type name="TestHVerbosity" ref="io.h#io.h::TestHVerbosity" />

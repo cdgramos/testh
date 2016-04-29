@@ -41,67 +41,95 @@
     </argument>
   </function>
   <function id="stat_Covariance" name="stat_Covariance">
+    <brief> stat_Covariance Function.</brief>
+    <doc>stat_Covariance quantifies the dependence between two variables, aka covariance.
+</doc>
     <return>
+      <doc>the covariance between k and h.</doc>
       <type builtin="yes" name="double" />
     </return>
     <argument id="stat_Covariance::k" name="k">
+      <doc>first variable.</doc>
       <type builtin="yes" name="int" />
     </argument>
     <argument id="stat_Covariance::h" name="h">
+      <doc>second variable.</doc>
       <type builtin="yes" name="double" />
     </argument>
   </function>
   <function id="stat_GOFChiSquare" name="stat_GOFChiSquare">
+    <brief> stat_GOFChiSquare Function.</brief>
+    <doc>stat_GOFChiSquare applies the Goodness of Fit Chi-Square to a set of points pt and to a certain distribution d.
+This function prints to the standard output the computed value, which is a way to measure how well model data reflects the real data.</doc>
     <return>
       <type builtin="yes" name="void" />
     </return>
     <argument id="stat_GOFChiSquare::pt" name="pt">
+      <doc>set of points.</doc>
       <type name="proc_Points" qualifier="*" ref="proc.h::proc_Points#proc.h::proc_Points" />
     </argument>
     <argument id="stat_GOFChiSquare::d" name="d">
+      <doc>type of distribution.</doc>
       <type name="dist" ref="dist.h::dist#dist.h::dist" />
     </argument>
   </function>
   <function id="stat_GOFKolmogorovSmirnov" name="stat_GOFKolmogorovSmirnov">
+    <brief> stat_GOFKolmogorovSmirnov Function.</brief>
+    <doc>stat_GOFKolmogorovSmirnov applies the Goodness of Fit Kolmogorov-Smirnov to a set of points pt and to a certain distribution d.
+This function prints to the standard output the computed value, which is a way to decide if a sample comes from a population with a specific distribution.</doc>
     <return>
       <type builtin="yes" name="void" />
     </return>
     <argument id="stat_GOFKolmogorovSmirnov::pt" name="pt">
+      <doc>set of points.</doc>
       <type name="proc_Points" qualifier="*" ref="proc.h::proc_Points#proc.h::proc_Points" />
     </argument>
     <argument id="stat_GOFKolmogorovSmirnov::d" name="d">
+      <doc>type of distribution.</doc>
       <type name="dist" ref="dist.h::dist#dist.h::dist" />
     </argument>
   </function>
   <function id="stat_Max" name="stat_Max">
+    <brief> stat_Max Function.</brief>
+    <doc>stat_Max returns the highest point value in the set pt.</doc>
     <return>
       <type builtin="yes" name="double" />
     </return>
     <argument id="stat_Max::pt" name="pt">
+      <doc>set of points.</doc>
       <type name="proc_Points" qualifier="*" ref="proc.h::proc_Points#proc.h::proc_Points" />
     </argument>
   </function>
   <function id="stat_Mean" name="stat_Mean">
+    <brief> stat_Mean Function.</brief>
+    <doc>stat_Mean function computes the Mean of the set pt and store it in pt-&gt;mean.</doc>
     <return>
       <type builtin="yes" name="void" />
     </return>
     <argument id="stat_Mean::pt" name="pt">
+      <doc>set of points.</doc>
       <type name="proc_Points" qualifier="*" ref="proc.h::proc_Points#proc.h::proc_Points" />
     </argument>
   </function>
   <function id="stat_Min" name="stat_Min">
+    <brief> stat_Min Function.</brief>
+    <doc>stat_Min returns the lowest point value in the set pt.</doc>
     <return>
       <type builtin="yes" name="double" />
     </return>
     <argument id="stat_Min::pt" name="pt">
+      <doc>set of points.</doc>
       <type name="proc_Points" qualifier="*" ref="proc.h::proc_Points#proc.h::proc_Points" />
     </argument>
   </function>
   <function id="stat_StdDeviation" name="stat_StdDeviation">
+    <brief> stat_StdDeviation Function.</brief>
+    <doc>stat_StdDeviation function computes the Standard Deviation of the set pt and store it in pt-&gt;stdDev.</doc>
     <return>
       <type builtin="yes" name="void" />
     </return>
     <argument id="stat_StdDeviation::pt" name="pt">
+      <doc>set of points.</doc>
       <type name="proc_Points" qualifier="*" ref="proc.h::proc_Points#proc.h::proc_Points" />
     </argument>
   </function>

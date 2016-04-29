@@ -1,7 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <category id="reg.h" name="reg.h" xmlns="http://jessevdk.github.com/cldoc/1.0">
   <brief>reg.h defines regression analysis functions and data types.</brief>
-  <struct name="reg_Linear" ref="reg.h::reg_Linear#reg.h::reg_Linear" />
+  <struct name="reg_Linear" ref="reg.h::reg_Linear#reg.h::reg_Linear">
+    <brief> reg_Linear Structure.</brief>
+  </struct>
   <function id="reg_CoefficientOfDetermination" name="reg_CoefficientOfDetermination">
     <brief> reg_CoefficientOfDetermination Function.</brief>
     <doc>reg_CoefficientOfDetermination calculates the Coefficient of Determination which depict the relationship between two data series.

@@ -16,10 +16,18 @@
 #define OK	1
 #define ERR -1
 
+/* TestHVerbosity Enumeration.
+ *
+ * TestHVerbosity defines the possible verbosity levels.
+*/
 enum TestHVerbosity {
+	// The TestH_NONE is equivalent to value 0 and it is intended to hide all non critical messages.
 	TestH_NONE 		= 0x0,
+	// The TestH_LOW is equivalent to value 1 and it represents a low level of verbosity.
 	TestH_LOW 		= 0x1,
+	// The TestH_MEDIUM is equivalent to value 2 and it represents a medium level of verbosity.
 	TestH_MEDIUM 	= 0x2,
+	// The TestH_HIGH is equivalent to value 3 and it represents a high level of verbosity.
 	TestH_HIGH 		= 0x3
 };
 

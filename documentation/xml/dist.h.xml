@@ -2,10 +2,20 @@
 <category id="dist.h" name="dist.h" xmlns="http://jessevdk.github.com/cldoc/1.0">
   <brief>dist.h provides probability distribution functions.</brief>
   <enum anonymous="yes" id="dist.h::TestHDistribution" name="TestHDistribution">
-    <enumvalue id="dist.h::TestH_Unif" name="TestH_Unif" value="-1" />
-    <enumvalue id="dist.h::TestH_Gauss" name="TestH_Gauss" value="0" />
-    <enumvalue id="dist.h::TestH_Pareto" name="TestH_Pareto" value="1" />
-    <enumvalue id="dist.h::TestH_Exp" name="TestH_Exp" value="2" />
+    <brief> TestHDistribution Enumeration.</brief>
+    <doc>TestHDistribution enumerates a list of possible distributions.</doc>
+    <enumvalue id="dist.h::TestH_Unif" name="TestH_Unif" value="-1">
+      <brief>The TestH_Unif is equivalent to value -1 and represents a Uniform Distribution.</brief>
+    </enumvalue>
+    <enumvalue id="dist.h::TestH_Gauss" name="TestH_Gauss" value="0">
+      <brief>The TestH_Gauss is equivalent to value 0 and represents a Gaussian Distribution.</brief>
+    </enumvalue>
+    <enumvalue id="dist.h::TestH_Pareto" name="TestH_Pareto" value="1">
+      <brief>The TestH_Pareto is equivalent to value 1 and represents a Pareto Distribution.</brief>
+    </enumvalue>
+    <enumvalue id="dist.h::TestH_Exp" name="TestH_Exp" value="2">
+      <brief>The TestH_Exp is equivalent to value 2 and represents a Exponential Distribution.</brief>
+    </enumvalue>
   </enum>
   <typedef name="dist" ref="dist.h::dist#dist.h::dist">
     <type name="TestHDistribution" ref="dist.h#dist.h::TestHDistribution" />
@@ -185,13 +195,19 @@
     </argument>
   </function>
   <function id="dist_UnifPDF" name="dist_UnifPDF">
+    <brief> dist_UnifPDF Function.</brief>
+    <doc>dist_UnifPDF calculates the Uniform Probability Density Function.
+</doc>
     <return>
+      <doc>the Uniform Probability Density Function value for a certain interval.</doc>
       <type builtin="yes" name="double" />
     </return>
     <argument id="dist_UnifPDF::a" name="a">
+      <doc>first boundary of the interval.</doc>
       <type builtin="yes" name="double" />
     </argument>
     <argument id="dist_UnifPDF::b" name="b">
+      <doc>second boundary of the interval.</doc>
       <type builtin="yes" name="double" />
     </argument>
   </function>

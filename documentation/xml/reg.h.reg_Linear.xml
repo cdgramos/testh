@@ -1,9 +1,14 @@
 <?xml version='1.0' encoding='utf-8'?>
 <struct id="reg.h::reg_Linear" name="reg_Linear" typedef="yes" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <brief> reg_Linear Structure.</brief>
+  <doc>reg_Linear is used to store the values needed for the linear regression line equation.
+</doc>
   <field id="reg.h::reg_Linear::m" name="m">
+    <brief>m is the y-interception.</brief>
     <type builtin="yes" name="double" />
   </field>
   <field id="reg.h::reg_Linear::b" name="b">
+    <brief>b is the slope.</brief>
     <type builtin="yes" name="double" />
   </field>
 </struct>

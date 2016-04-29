@@ -42,7 +42,9 @@ You can get the source code from [testH repository](https://github.com/cdgramos/
   </category>
   <category name="reg.h" ref="reg.h#reg.h">
     <brief>reg.h defines regression analysis functions and data types.</brief>
-    <struct name="reg_Linear" ref="reg.h::reg_Linear#reg.h::reg_Linear" />
+    <struct name="reg_Linear" ref="reg.h::reg_Linear#reg.h::reg_Linear">
+      <brief> reg_Linear Structure.</brief>
+    </struct>
   </category>
   <category name="rng.h" ref="rng.h#rng.h">
     <brief>rng.h defines random number generator functions.</brief>
