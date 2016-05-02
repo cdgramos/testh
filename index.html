@@ -11,7 +11,7 @@
 
 
     <style>
-ul {
+#ul01{
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -22,25 +22,26 @@ ul {
 	border-radius: 10px;
 }
 
-li {
+#li01 {
+  color: #A8A8A8;
     float: left;
     border-right:1px solid #bbb;
 }
 
-li.first{
+#li01.first{
    border-top-left-radius:15px;
    border-bottom-left-radius:15px;
 }
-li.last{
+#li01.last{
     border-top-right-radius:15px;
    border-bottom-right-radius:15px;
 }
 
-li:last-child {
+#li01:last-child {
     border-right: none;
 }
 
-li a {
+#li01 a {
     display: block;
     color: white;
     text-align: center;
@@ -48,7 +49,7 @@ li a {
     text-decoration: none;
 }
 
-li a:hover:not(.active) {
+#li01 a:hover:not(.active) {
     background-color: #111;
     text-decoration: none;
 }
@@ -71,12 +72,12 @@ li a:hover:not(.active) {
     <section class="main-content">
 
 
-<ul>
-    <li><a class="active" href="index.html">TestH</a></li>
-    <li><a href="examples.html">Examples</a></li>
-    <li><a href="contributors.html">Contributors</a></li>
-    <li><a href="resources.html">Resources</a></li>
-    <li style="float:right"><a href="documentation/index.html">Documentation</a></li>
+<ul id="ul01">
+    <li id="li01"><a class="active" href="index.html">TestH</a></li>
+    <li id="li01"><a href="examples.html">Examples</a></li>
+    <li id="li01"><a href="contributors.html">Contributors</a></li>
+    <li id="li01"><a href="resources.html">Resources</a></li>
+    <li id="li01" style="float:right"><a href="documentation/index.html">Documentation</a></li>
 </ul>
 
       <h1>
