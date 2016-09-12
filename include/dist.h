@@ -60,6 +60,8 @@ double dist_CDFProb (dist d, double x);
 double dist_UnifPDF (double a, double b);
 
 double dist_GaussPDF (double x, double mu, double sigma);
+
+
 double dist_ParetoPDF (double x, double xm, double alpha);
 double dist_ExponentialPDF (double x, double lambda);
 

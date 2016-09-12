@@ -46,7 +46,7 @@ typedef enum TestHGenerator gen;
  * gen_PrintHeader function prints to the standard output the name of the generator g.
  * @return a proc_Process with a time series readen from a file.
 */
-void 	gen_PrintHeader	(gen g);
+void gen_PrintHeader (gen g);
 
 /* gen_ReadFile Function.
  * @g generator.
@@ -54,7 +54,7 @@ void 	gen_PrintHeader	(gen g);
  * gen_ReadFile function checks if a given generator g is valid..
  * @return OK if g is valir or ERR if g isn't valid.
 */
-int 	gen_CheckGen	(gen g);
+int gen_CheckGen (gen g);
 
 proc_Process* gen_GenProc (gen g, int n, double h);
 
