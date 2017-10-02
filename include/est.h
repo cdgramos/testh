@@ -19,7 +19,15 @@ enum TestHEstimator {
 	// Absolute Moments Time.
 	TestH_AMT	= 0x3,
 	// Embedded Branching Process.
-	TestH_EBP	= 0x4
+	TestH_EBP	= 0x4,
+	// Hurst Exponent by Autocorrelation Function.
+	TestH_HEAF	= 0x5,
+	// Higuchi.
+	TestH_HIG   = 0x6,
+	// Detrended Fluctuation Analysis.
+	TestH_DFA   = 0x7,
+	// Periodogram
+	TestH_PER   = 0x8
 };
 
 typedef enum TestHEstimator est;
@@ -49,7 +57,7 @@ double est_VarianceTime (proc_Process *pr);
  * est_AbsoluteMomentsTime implements the Absolute Moments Time (AMT) algorithm, and for a given process it returns the computed hurst parameter.
  * @return the hurst parameter for a given process.
 */
-void est_AbsoluteMomentsTime (proc_Process *pr, int mom);
+double est_AbsoluteMomentsTime (proc_Process *pr, int mom);
 
 
 /* est_EmbeddedBranchingProcess Function.
@@ -59,7 +67,43 @@ void est_AbsoluteMomentsTime (proc_Process *pr, int mom);
  * est_EmbeddedBranchingProcess implements the Embedded Branching Process (EBP) algorithm, and for a given process it returns the computed hurst parameter.
  * @return the hurst parameter for a given process.
 */
-void est_EmbeddedBranchingProcess (proc_Process *pr, int K);
+double est_EmbeddedBranchingProcess (proc_Process *pr, int K);
+
+
+/* est_AutocorrelationFunction Function.
+ * @pr pointer to a given process.
+ *
+ * est_AutocorrelationFunction implements the Hurst Exponent by Autocorrelation Function (HEAF) algorithm, and for a given process it returns the computed hurst parameter.
+ * @return the hurst parameter for a given process.
+*/
+double est_AutocorrelationFunction (proc_Process *pr);
+
+
+/* est_Higuchi Function.
+ * @pr pointer to a given process.
+ *
+ * est_Higuchi implements the Higuchi algorithm, and for a given process it returns the computed hurst parameter.
+ * @return the hurst parameter for a given process.
+*/
+double est_Higuchi (proc_Process *pr);
+
+
+/* est_DetrendedFluctuationAnalysis Function.
+ * @pr pointer to a given process.
+ *
+ * est_DetrendedFluctuationAnalysis implements the Detrented Fluctuation Analysis(DFA) algorithm, and for a given process it returns the computed hurst parameter.
+ * @return the hurst parameter for a given process.
+*/
+double est_DetrendedFluctuationAnalysis (proc_Process *pr);
+
+
+/* est_Periodogram Function.
+ * @pr pointer to a given process.
+ *
+ * est_Periodogram implements the Periodogram algorithm, and for a given process it returns the computed hurst parameter.
+ * @return the hurst parameter for a given process.
+*/
+double est_Periodogram (proc_Process *pr);
 
 #endif /* __TESTH_ESTIMATORS__ */
 

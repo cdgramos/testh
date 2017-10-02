@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0
 #include "io.h"
 #include "util.h"
 
@@ -28,11 +25,7 @@ int  TestHPrintMemCPU = OFF;
 int  TestHEstPrintH   = ON;
 int  TestHEstWrToFile = OFF;
 
-<<<<<<< HEAD
-// another global parameter to turn on or off regression
-=======
 // another global parameter to turn on or off regression 
->>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0
 // at end of estimation, for example?
 // more for other
 
@@ -41,11 +34,7 @@ void io_PrintTestH ()
 {
 	if (TestHVerbosity > TestH_NONE && TestHPrintPlain == OFF) {
 		io_PrintSep ();
-<<<<<<< HEAD
-		fprintf (stdout,
-=======
 		fprintf (stdout, 
->>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0
 			" TestH -- API Summary\n\n"
 			" - proc.h (process)\n"
 			"\t* struct proc_Process\n"
@@ -112,35 +101,19 @@ void io_PrintInit (params, argv)
 		fprintf (stdout, "\t bin: %s\n\n", argv);
 	}
 }
-<<<<<<< HEAD
-
-void io_PrintDone ()
-=======
 void io_PrintDone () 
->>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0
 {
 	if (TestHVerbosity > TestH_NONE && TestHPrintPlain == OFF)
 		fprintf (stdout, "\n\n done!\n\n");
 }
-<<<<<<< HEAD
-
-void io_PrintSep ()
-{
-	if (TestHVerbosity > TestH_NONE &&
-=======
 void io_PrintSep () 
 {
 	if (TestHVerbosity > TestH_NONE && 
->>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0
 		TestHPrintSep == ON && TestHPrintPlain == OFF)
 		fprintf (stdout, "\n%s- - - - - - - - - - - - - - "
 			"- - - - - - - - - - - - - -%s\n\n",
 			CGRAY_GRAY, CRESET);
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0
 void io_PrintError (
 	const int err,
 	const char *format,
@@ -149,11 +122,7 @@ void io_PrintError (
 	// if (TestHVerbosity > TestH_NONE) {
 		va_list args;
 		va_start (args, format);
-<<<<<<< HEAD
-		fprintf (stderr, "\n[!] %sERROR%s %d: %s\n",
-=======
 		fprintf (stderr, "\n[!] %sERROR%s %d: %s\n", 
->>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0
 			CRED_ORANGE, CRESET, err, strerror (err));
 		fprintf (stderr, "%s:%d: ", __FILE__, __LINE__);
 		vfprintf (stderr, format, args);
@@ -161,10 +130,6 @@ void io_PrintError (
 		fprintf (stderr, "\n\n");
 	// }
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0
 void io_PrintErr (
 	const int err,
 	const char *format,
@@ -173,11 +138,7 @@ void io_PrintErr (
 	// if (TestHVerbosity > TestH_NONE) {
 		va_list args;
 		va_start (args, format);
-<<<<<<< HEAD
-		fprintf (stderr, "\n[!] %sERROR%s %d: %s\n",
-=======
 		fprintf (stderr, "\n[!] %sERROR%s %d: %s\n", 
->>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0
 			CRED_ORANGE, CRESET, err, strerror (err)); // perror
 		fprintf (stderr, "%s:%d: ", __FILE__, __LINE__);
 		vfprintf (stderr, format, args);
@@ -188,11 +149,7 @@ void io_PrintErr (
 }
 
 void io_PrintBits (
-<<<<<<< HEAD
-	unsigned long x,
-=======
 	unsigned long x, 
->>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0
 	int k)
 {
 /* void bits (unsigned long long i) {
@@ -239,25 +196,15 @@ void io_PrintBits (
 int io_CheckH (
 	double h)
 {
-<<<<<<< HEAD
-	return h < 0.0 || h >= 1.0
-		? ERR
-		: OK;
-=======
 	return h < 0.0 || h >= 1.0 
 		? ERR
 		: OK; 
->>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0
 }
 
 int io_CheckPowerOfTwo (
 	int num)
 {
-<<<<<<< HEAD
-	return (num != 0) && ((num & (num - 1)) == 0);
-=======
 	return (num != 0) && ((num & (num - 1)) == 0);        
->>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0
 }
 
 int io_PowerOfExp (
@@ -305,22 +252,13 @@ FILE* io_FileOpen (
 		io_PrintErr (errno, "fopen failed opening %s in"
 			" io_OpenFile", path);
 	return f;
-<<<<<<< HEAD
 }
-
-=======
-}
->>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0
 void io_FileClose (
 	const char 	*path,
 	FILE 		*f)
 {
 	errno = 0;
-<<<<<<< HEAD
-	if (f != NULL &&
-=======
 	if (f != NULL && 
->>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0
 		fclose (f) == EOF)
 			io_PrintErr (errno, "fclose failed closing %s in"
 				" io_FileClose", path);
@@ -330,13 +268,7 @@ void io_FileClean (
 {
 	FILE *f = io_FileOpen (path, "w");
 	io_FileClose (path, f);
-<<<<<<< HEAD
 }
-
-
-=======
-}
->>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0
 int io_FileLines (
 	FILE *f)
 {
@@ -359,11 +291,7 @@ int io_FileColumns (
 	int c = 0, fl = 0;
 	double d;
 	for (;;) {
-<<<<<<< HEAD
-		fl = io_FileGetNum (f, &d, TestH_RFM);
-=======
 		fl = io_FileGetNum (f, &d, TestH_RFM); 
->>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0
 		if (fl == OK || fl == TestH_RFM)
 			c++;
 		if (fl == TestH_RFM)
@@ -384,11 +312,7 @@ int io_FileGetNum (
 	int s, m, d, dd, ch;
 	char *str = NULL;
 	s = m = d = dd = ch = 0;
-<<<<<<< HEAD
-
-=======
 	
->>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0
 	while (EOF != (ch = fgetc(f))) {
 		// fprintf (stdout, " [%c, %d] %d\n", ch, ch, s);
 		if (ch == '-')
@@ -426,17 +350,10 @@ int io_FileGetNum (
 				str[s] = '\0';
 				*p = atof (str);
 				free (str);
-<<<<<<< HEAD
-				/* if (g == TestH_RFM &&
-					s != 0 && ch == ' ')
-					return TestH_RFM; */
-				if (g == TestH_RFM &&
-=======
 				/* if (g == TestH_RFM && 
 					s != 0 && ch == ' ')
 					return TestH_RFM; */
 				if (g == TestH_RFM && 
->>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0
 					s != 0 && ch == '\n')
 					return TestH_RFM;
 				return OK;
@@ -445,24 +362,13 @@ int io_FileGetNum (
 	}
 	return EOF;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0
 void io_FileWr (
 	const char 		*path,
 	const char 		*mode,
 	const double 	d1,
 	const double 	d2)
 {
-<<<<<<< HEAD
-	FILE *f = io_FileOpen (path, mode);
-	fprintf (f, "%lf %lf\n", d1, d2);
-	io_FileClose (path, f);
-}
-=======
 	FILE *f = io_FileOpen (path, mode);	
 	fprintf (f, "%lf %lf\n", d1, d2);
 	io_FileClose (path, f);
 }
->>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0

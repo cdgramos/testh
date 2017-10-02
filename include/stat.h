@@ -12,7 +12,8 @@
 // 39 digits is enough
 // But double cuts precision
 #define PI 		(double) 3.141592653589793238462643383279502884197
-#define NEPER 	(double) 2.71828
+#define PI2 	(double) 6.283185307179586476925286766559005768394
+#define NEPER 	(double) 2.7182818284590452353602874713527
 
 /* stat_Mean Function.
  * @pt set of points.

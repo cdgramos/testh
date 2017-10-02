@@ -38,7 +38,17 @@ double reg_CoefficientOfDetermination (double *y, double *x, int n);
 */
 reg_Linear* reg_LeastSquareMeans (double *y, double *x, int n, int print);
 
-
+/* reg_LeastSquareMeansLimited Function.
+ * @y are the values for the y-axis.
+ * @x are the values for the x-axis.
+ * @low is the lower boundary of the values to be computed.
+ * @top is the top boundary of the values to be computed.
+ * @print accept the values YES or NO to print the function result.
+ *
+ * reg_LeastSquareMeansLimited calculates the overall solution that minimizes the sum of the squares of the errors, this functions can be defined to operate over a specific range of values [low, top].
+ * @return returns the linear regression fitted to points between [low, top].
+*/
+reg_Linear reg_LeastSquareMeansLimited (double *x, double *y, int low, int top, int print);
 
 #endif /* __TESTH_REGRESSION__ */
 

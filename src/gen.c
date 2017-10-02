@@ -6,6 +6,7 @@
 #include "stat.h"
 #include "rng.h"
 #include "io.h"
+#include "func.h"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -67,6 +68,10 @@ void gen_PrintHeader (
 				strcpy (g1, "Paxson");
 				strcpy (g2, "Pax");
 				break;
+			case TestH_DavHart:
+				strcpy (g1, "DaviesHarte");
+				strcpy (g2, "DavHart");
+				break;
 
 			default:
 				strcpy (g1, "undefined");
@@ -83,7 +88,7 @@ int gen_CheckGen (
 	gen g)
 {
 	int i, f;
-	for (i=TestH_RFTA, f=0; i<=TestH_Pax; i++) {
+	for (i=TestH_RFTA, f=0; i<=TestH_DavHart; i++) {
 		if (g == i) {
 			f = 1;
 			break;
@@ -125,6 +130,9 @@ proc_Process* gen_GenProc (
 			break;
 		case TestH_Pax:
 			return gen_Paxson (n, h, TestH_fGn);
+			break;
+		case TestH_DavHart:
+			return gen_DaviesHart (n, h, TestH_fGn);
 			break;
 		
 		default:
@@ -935,3 +943,109 @@ proc_Process* gen_Paxson (
 	util_TimeWr (&c);
 	return pr;
 }
+
+
+proc_Process* gen_DaviesHart (
+	int 	N,
+	double 	H,
+	tosig 	sig)
+{
+
+	if (N <= 0 || (sig != TestH_fGn && sig != TestH_fBm) || 
+		io_CheckH (H) == ERR)
+	    io_PrintErr (ERR, "invalid parameters in" 
+	    	" gen_DaviesHart");
+
+	clock_t c;
+	util_TimeIt (&c);
+
+	gen_PrintHeader (TestH_DavHart);
+
+	double *points = util_MemMalloc (N * sizeof (double));
+	
+    double L = 1.0; // Lenght of realization
+    double scale = L / N;
+
+    double *rowComponent;
+
+    int i = 0;
+    int j = 0;
+
+    func_complexNumber *complexVec = util_MemCalloc (N * 2, sizeof(func_complexNumber));
+    func_complexNumber *tmpComplexVec =  util_MemCalloc (N * 2, sizeof(func_complexNumber));
+
+    rowComponent =  util_MemMalloc (N * sizeof(double));
+
+    srand(time(NULL));
+
+    if (H == 0.5) {
+        for (i = 0; i < N; i++) {
+            points[i] = dist_GaussPolar();
+        }
+    }
+    else {
+
+        for (i = 0; i < N; i++) {
+            rowComponent[i] = stat_Covariance(i+1, H);
+        }
+
+
+        for (i = 0; i < N * 2; i++) {
+        	if (i == 0) {
+        		complexVec[i].real = 1.0;
+        	}
+        	else if (i >= 1 && i <= N-1) {
+        		complexVec[i].real = rowComponent[i-1];
+        	}
+        	else if (i == N) {
+        		j = N-2;
+        		complexVec[i].real = 0.0;
+        	}
+        	else if (i > N) {
+        		complexVec[i].real = rowComponent[j];
+        		j--;
+        	}
+        }
+
+
+        func_FastFourierTransform(complexVec, N * 2, tmpComplexVec);
+
+        for (i = 0; i < N * 2; i++) {
+            if (complexVec[i].real < 0) {
+            	complexVec[i].real  = 0.00000001;
+            }
+
+            if (i == 0) {
+                complexVec[i].real = sqrt((complexVec[i].real) / (2.0 * N)) * dist_GaussPolar();
+            }
+            else if (i < N) {
+                complexVec[i].real = sqrt((complexVec[i].real) / (4.0 * N)) * (dist_GaussPolar() + 1 * dist_GaussPolar());
+            }
+            else if (i == N) {
+                complexVec[i].real = sqrt((complexVec[i].real) / (2.0 * N)) * dist_GaussPolar();
+            }
+            else {
+                complexVec[i].real = sqrt((complexVec[i].real) / (4.0 * N)) * (dist_GaussPolar() - 1 * dist_GaussPolar());
+            }
+        }
+
+		func_FastFourierTransform(complexVec, N*2, tmpComplexVec);
+
+        for (j = 0; j < N; j++) {
+            points[j] = complexVec[j].real * scale;
+        }
+
+    }
+
+	proc_Process *pr = proc_CreateProcess ("DaviesHarte", points, NULL, N, sig);
+
+	long int mem = sizeof (points);
+	util_MemWr (mem);
+	util_MemFree (points);
+	util_MemFree (rowComponent);
+	//util_MemFree (complexVec);
+	//util_MemFree (tmpComplexVec);
+	util_TimeWr (&c);
+	return pr;
+}
+

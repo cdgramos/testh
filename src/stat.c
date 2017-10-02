@@ -36,7 +36,7 @@ void stat_AbsoluteMomentsTime (
 	long double sum;
 	stat_Mean (pt);
 	for (p=0, sum=0.0; p<pt->size; p++)
-		sum += pow (pt->points[p] - pt->mean, e);
+		sum += pow (abs(pt->points[p] - pt->mean), e);
 	pt->amt = (double) sum / (double) pt->size;
 	pt->moment = e;
 }

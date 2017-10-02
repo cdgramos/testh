@@ -36,6 +36,9 @@ You can get the source code from [testH repository](https://github.com/cdgramos/
   </category>
   <category name="func.h" ref="func.h#func.h">
     <brief>func.h provides mathematical functions.</brief>
+    <struct name="func_complexNumber" ref="func.h::func_complexNumber#func.h::func_complexNumber">
+      <brief> func_complexNumber Structure.</brief>
+    </struct>
   </category>
   <category name="io.h" ref="io.h#io.h">
     <brief>io.h defines file handling and printing functions.</brief>

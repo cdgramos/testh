@@ -93,3 +93,45 @@ reg_Linear* reg_LeastSquareMeans (
 
 
 
+reg_Linear reg_LeastSquareMeansLimited (
+	double 	*x,
+	double 	*y,
+	int     low,
+	int 	top,
+	int 	print
+	)
+{
+
+    reg_Linear r;
+
+	int i;
+	double sx, sxx, sy, sxy;
+	double xb, yb;
+
+	sx = sxx = sy = sxy = 0.0;
+	xb = yb = 0.0;
+
+	for (i=low; i<top; i++) {
+        xb +=x[i];
+        yb +=y[i];
+	}
+
+	xb = xb / (top-low);
+    yb = yb / (top-low);
+
+	for (i=low; i<top; i++) {
+		sx  += pow(x[i]-xb,2);
+		sy  += pow(y[i]-yb,2);
+		sxy += (x[i]-xb)*(y[i]-yb);
+	}
+
+	r.b = sxy / sx;
+	r.m = yb - ((r.b) * xb);
+
+	if (TestHVerbosity > TestH_MEDIUM && TestHPrintPlain == OFF && print == ON)
+		fprintf (stdout, "\n LSM: y = %.2lf * x + %.2lf\n", r.m, r.b);
+	return r;
+}
+
+
+

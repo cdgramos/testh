@@ -36,15 +36,12 @@ double ExtGen ();
 
 
 #if 0
-
 	// Another main here
 	// set ifs to 0 on the others or change function name (e.g., to main2)
-
 int main ()
 {
 	TestHVerbosity = TestH_HIGH;
 	TestHEstWrToFile = ON;
-
 	int i;
 	double a[1000000];
 	for (i=0; i<1000000; i++)
@@ -55,9 +52,6 @@ int main ()
 	est_VarianceTime (p);
 	est_RescaledRangeStatistics (p);
 }
-
-
-
 #endif
 
 
@@ -68,19 +62,14 @@ int main (int argc, char *argv[]) {
 	TestHPrintHeader = OFF;
 	TestHPrintMemCPU = OFF;
 	TestHEstWrToFile = OFF;
-
 	io_PrintInit ("make; make run", argv[0]);
-
-	proc_Process *pr1 = gen_fBmSequentialGenerationAlgorithm (100, 0.8, S, 
+	proc_Process *pr1 = gen_fBmSequentialGenerationAlgorithm (100, 0.8, S,
 				TestH_fGn);
 	// proc_Process *pr2 = gen_AggRenewal (100, 0.8, RENEWAL, xm, TestH_fGn);
-
 	proc_PrintPoints (pr1->points);
 	// proc_PrintPoints (pr2->points);
-
 	proc_CreateScales (pr1, TestH_INC, 2, 8, 2);
 	proc_PrintScales (pr1);
-
 	io_PrintDone ();
 	return EXIT_SUCCESS;
 }
@@ -94,17 +83,13 @@ int main (int argc, char *argv[]) {
 	TestHPrintHeader = OFF;
 	TestHPrintMemCPU = OFF;
 	TestHEstWrToFile = OFF;
-
 	io_PrintInit ("make; make run", argv[0]);
-
 	proc_Process *pr = NULL;
-
 	int i;
 	double j;
 	double s = 10.0;
 	double h1, h2, H1, H2;
 	double H1_s, H2_s;
-
 	fprintf (stdout, "\n  H & VT & R/S\n");
 	for (j=0.50; j<1.0; j+=0.05) {
 		H1 = H2 = 0.0;
@@ -114,14 +99,11 @@ int main (int argc, char *argv[]) {
 			// pr = gen_fBmSequentialGenerationAlgorithm (102400, j, S, TestH_fGn);
 			// pr = gen_AggRenewal (100000, j, RENEWAL, xm, TestH_fGn);
 			pr = gen_Hosking (10000, j, TestH_fGn);
-
 			// proc_PrintPoints (pr->points);
-
 			proc_CreateScales (pr, TestH_POW, 2, 10, 2);
 			// proc_CreateScales (pr, TestH_INC, 2, 10, 2);
 			// proc_PrintScales (pr);
 			// proc_PrintPoints (&pr->scales->scales[0]);
-
 			h1 = est_VarianceTime (pr);
 			h2 = est_RescaledRangeStatistics (pr);
 			// fprintf (stdout, "H1: %lf H2: %lf\n", H1 / 100.0, H2);
@@ -129,17 +111,15 @@ int main (int argc, char *argv[]) {
 			H2 += h2;
 			H1_s += h1 * h1;
 			H2_s += h2 * h2;
-
 			proc_DeleteProcess (pr);
 		}
 		H1 /= s;
 		H1_s /= s;
 		H2 /= s;
 		H2_s /= s;
-		fprintf (stdout, " %.2lf & %lf (%lf) & %lf (%lf)\n", 
+		fprintf (stdout, " %.2lf & %lf (%lf) & %lf (%lf)\n",
 			j, H1, sqrt (H1_s - H1 * H1), H2, sqrt (H2_s - H2 * H2));
 	}
-
 	io_PrintDone ();
 	return EXIT_SUCCESS;
 }
@@ -147,10 +127,6 @@ int main (int argc, char *argv[]) {
 
 #if 1
 int main (int argc, char *argv[]) {
-<<<<<<< HEAD
-	int tp = 0;
-=======
->>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0
 	TestHVerbosity = TestH_HIGH;
 	TestHPrintPlain = OFF;
 	TestHPrintSep = ON;
@@ -173,6 +149,7 @@ int main (int argc, char *argv[]) {
 	// pr = gen_AggRenewal (N, H, RENEWAL, xm, TestH_fGn);
 	// pr = gen_fBmSequentialGenerationAlgorithm (N, H, S, TestH_fGn);
 	// pr = gen_SimpleSelfSimilarProcessGenerator (N, H, S, TestH_fGn);
+	// pr = gen_DaviesHart (N, H, TestH_fGn)
 
 	// pr2 = gen_ExternGen (100, "ExtGen", ExtGen, TestH_fGn);
 	// proc_CreateScales (pr2, MIN_SCALE, MAX_SCALE, STEP);
@@ -186,31 +163,28 @@ int main (int argc, char *argv[]) {
 	// proc_FractionalBrownianMotion (pr);
 	// proc_PrintPoints (pr->points);
 
-<<<<<<< HEAD
-	 conf = proc_CreateScalesConfig (TestH_INC, 4, 10, 2);
-	// conf = proc_CreateScalesConfig (TestH_POW, 7, 11, 2);
-=======
 	// conf = proc_CreateScalesConfig (TestH_INC, 4, 10, 2);
 	conf = proc_CreateScalesConfig (TestH_POW, 7, 11, 2);
->>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0
 
 	// proc_CreateScales (pr, conf);
 	// proc_CreateScalesTime (pr, TMIN_SCALE, TMAX_SCALE, TMULTIPLIER);
-	
+
 	// proc_PrintProcessStruct (pr);
 	// proc_PrintProcess (pr);
 	// proc_PrintPoints (&pr->scales->scales[0]);
 	// proc_PrintScales (pr);
 
-	// est_VarianceTime (pr);
 	// est_RescaledRangeStatistics (pr);
-	
-<<<<<<< HEAD
-	batt_Generator (TestH_fBmSGA, 10e5, 2, 0.5, 0.99, 0.05, conf);
-=======
+	// est_VarianceTime (pr);
+	// est_AbsoluteMomentsTime (pr, 3);
+	// est_EmbeddedBranchingProcess (pr, 4);
+	// est_AutocorrelationFunction (pr);
+ 	// est_Higuchi (pr);
+	// est_DetrendedFluctuationAnalysis (pr);
+	// est_Periodogram (pr);
+
 	batt_Generator (TestH_fBmSGA, 10e5, 2, 0.50, 0.99, 0.05, conf);
 
->>>>>>> a2f70c1e6f868b8ea31e27bc0579de852bd519b0
 	// stat_AutocorrelationFunction (pr, 1, 40, H);
 
 	// util_MemWr (proc_SizeOfProcess (pr));

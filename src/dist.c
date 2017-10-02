@@ -1,3 +1,4 @@
+
 #include "stat.h"
 #include "dist.h"
 #include "rng.h"
@@ -27,7 +28,6 @@ int dist_CheckDist (
 	return OK;
 }
 
-
 double dist_PDFProb (
 	dist 	d,
 	double 	x)
@@ -50,8 +50,6 @@ double dist_PDFProb (
 			break;
 	}
 }
-
-
 double dist_CDFProb (
 	dist 	d,
 	double 	x)
@@ -75,15 +73,12 @@ double dist_CDFProb (
 	}
 }
 
-
 double dist_UnifPDF (
 	double a,
 	double b)
 {
 	return 1.0 / (b - a);
 }
-
-
 double dist_GaussPDF (
 	double x,
 	double mu,
@@ -93,8 +88,6 @@ double dist_GaussPDF (
 		pow (NEPER, -((x-mu)*(x-mu)) / (2*sigma*sigma));
 	return y;
 }
-
-
 double dist_ParetoPDF (
 	double x,
 	double xm,
@@ -104,8 +97,6 @@ double dist_ParetoPDF (
 		return 0.0;
 	return (alpha*pow (xm, alpha)) / pow (x, alpha+1);
 }
-
-
 double dist_ExponentialPDF (
 	double x,
 	double lambda)
@@ -114,7 +105,6 @@ double dist_ExponentialPDF (
 		return 0.0;
 	return lambda * pow (NEPER, -lambda*x);
 }
-
 
 double dist_UnifCDF (
 	double x,
@@ -127,8 +117,6 @@ double dist_UnifCDF (
 		return b;
 	return (x - a) / (b - a);
 }
-
-
 double dist_GaussCDF (
 	double x,
 	double mu,
@@ -136,8 +124,6 @@ double dist_GaussCDF (
 {
 	return (1 + erf ((x - mu) / sqrt (2*sigma*sigma))) / 2;
 }
-
-
 double dist_ParetoCDF (
 	double x,
 	double xm,
@@ -147,8 +133,6 @@ double dist_ParetoCDF (
 		return 0.0;
 	return 1.0 - (pow (xm, alpha) / pow (x, alpha));  
 }
-
-
 double dist_ExponentialCDF (
 	double x,
 	double lambda)
@@ -168,7 +152,6 @@ double dist_UnifInv (
 		+ a;
 }
 
-
 double dist_GaussBoxMuller ()
 {
 	static int f = OFF;
@@ -182,8 +165,6 @@ double dist_GaussBoxMuller ()
 		? sqrt (-2.0 * log (u1)) * sin (2.0 * PI * u2)
 		: sqrt (-2.0 * log (u1)) * cos (2.0 * PI * u2);
 }
-
-
 double dist_GaussPolar ()
 {
 	static int f = OFF;
@@ -203,14 +184,12 @@ double dist_GaussPolar ()
 		: u2 * sqrt (-2 * log (w) / w);
 }
 
-
 double dist_ParetoInv (
 	double xm,
 	double alpha)
 {
 	return xm / pow (1.0 - rng_MT19937_genrand (), 1.0 / alpha);
 }
-
 
 double dist_ExponentialInv (
 	double lambda)

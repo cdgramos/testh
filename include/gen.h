@@ -35,7 +35,9 @@ enum TestHGenerator {
 	// Hosking.
 	TestH_Hosk		= 0x4,
 	// Paxson.
-	TestH_Pax		= 0x5
+	TestH_Pax		= 0x5,
+	// Davies and Hart
+	TestH_DavHart   = 0x6
 };
 
 typedef enum TestHGenerator gen;
@@ -113,10 +115,20 @@ proc_Process* gen_Hosking (int N, double h, tosig sig);
  * @h target hurst value of the generated time series.
  * @sig type of signal to be used.
  *
- * gen_Paxson function generates a self similar time serie using the gen_Paxson algorithm.
+ * gen_Paxson function generates a self similar time serie using the Paxson algorithm.
  * @return a proc_Process with a generated time series of size N and with a hurst value of h.
 */
 proc_Process* gen_Paxson  (int N, double h, tosig sig);
+
+/* gen_DaviesHart Function.
+ * @N scalar defining the number of desired points to be generated.
+ * @h target hurst value of the generated time series.
+ * @sig type of signal to be used.
+ *
+ * gen_DaviesHart function generates a self similar time serie using the Davies and Hart algorithm.
+ * @return a proc_Process with a generated time series of size N and with a hurst value of h.
+*/
+proc_Process* gen_DaviesHart  (int N, double h, tosig sig);
 
 #endif /* __TESTH_GENERATORS__ */
 

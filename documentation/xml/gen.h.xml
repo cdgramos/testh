@@ -37,6 +37,9 @@
     <enumvalue id="gen.h::TestH_Pax" name="TestH_Pax" value="5">
       <brief>Paxson.</brief>
     </enumvalue>
+    <enumvalue id="gen.h::TestH_DavHart" name="TestH_DavHart" value="6">
+      <brief>Davies and Hart</brief>
+    </enumvalue>
   </enum>
   <typedef name="gen" ref="gen.h::gen#gen.h::gen">
     <type name="TestHGenerator" ref="gen.h#gen.h::TestHGenerator" />
@@ -58,6 +61,27 @@
       <type builtin="yes" name="int" />
     </argument>
     <argument id="gen_AggRenewal::sig" name="sig">
+      <type name="tosig" ref="proc.h#proc.h::tosig" />
+    </argument>
+  </function>
+  <function id="gen_DaviesHart" name="gen_DaviesHart">
+    <brief> gen_DaviesHart Function.</brief>
+    <doc>gen_DaviesHart function generates a self similar time serie using the Davies and Hart algorithm.
+</doc>
+    <return>
+      <doc>a proc_Process with a generated time series of size N and with a hurst value of h.</doc>
+      <type name="proc_Process" qualifier="*" ref="proc.h::proc_Process#proc.h::proc_Process" />
+    </return>
+    <argument id="gen_DaviesHart::N" name="N">
+      <doc>scalar defining the number of desired points to be generated.</doc>
+      <type builtin="yes" name="int" />
+    </argument>
+    <argument id="gen_DaviesHart::h" name="h">
+      <doc>target hurst value of the generated time series.</doc>
+      <type builtin="yes" name="double" />
+    </argument>
+    <argument id="gen_DaviesHart::sig" name="sig">
+      <doc>type of signal to be used.</doc>
       <type name="tosig" ref="proc.h#proc.h::tosig" />
     </argument>
   </function>
@@ -140,7 +164,7 @@
   </function>
   <function id="gen_Paxson" name="gen_Paxson">
     <brief> gen_Paxson Function.</brief>
-    <doc>gen_Paxson function generates a self similar time serie using the gen_Paxson algorithm.
+    <doc>gen_Paxson function generates a self similar time serie using the Paxson algorithm.
 </doc>
     <return>
       <doc>a proc_Process with a generated time series of size N and with a hurst value of h.</doc>

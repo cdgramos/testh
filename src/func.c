@@ -1,6 +1,7 @@
 
 #include "func.h"
 #include "io.h"
+#include "stat.h"
 
 #include <stdlib.h>
 #include <math.h>
@@ -193,4 +194,55 @@ long func_GCDR (long a, long b)
 {
 	if (a == 0) return b;
 	return func_GCDR (b % a, a);
+}
+
+
+void
+func_FastFourierTransform(func_complexNumber *inputComplex, int n, func_complexNumber *temporaryComplex)
+{
+	if(n < 1) return;
+
+    int k,m;
+
+    func_complexNumber staticInputComplex;
+    func_complexNumber staticTemporaryComplex;
+    func_complexNumber *pointerInputComplex;
+    func_complexNumber *pointerTemporaryComplex;
+
+    pointerTemporaryComplex = temporaryComplex;
+    pointerInputComplex = temporaryComplex + n / 2;
+
+
+    for(k=0; k<n/2; k++) {
+      pointerTemporaryComplex[k].real = inputComplex[2 * k].real;
+      pointerTemporaryComplex[k].imag = inputComplex[2 * k].imag;
+      pointerInputComplex[k].real = inputComplex[2 * k + 1].real;
+      pointerInputComplex[k].imag = inputComplex[2 * k + 1].imag;
+    }
+    
+    func_FastFourierTransform(pointerTemporaryComplex, n/2, inputComplex);
+
+    func_FastFourierTransform(pointerInputComplex, n/2, inputComplex);
+
+    for(m=0; m<n/2; m++) {
+      staticTemporaryComplex.real = cos(2 * PI * m / (double)n);
+      staticTemporaryComplex.imag = -sin(2 * PI * m / (double)n);
+      staticInputComplex.real = staticTemporaryComplex.real * pointerInputComplex[m].real - staticTemporaryComplex.imag * pointerInputComplex[m].imag;
+      staticInputComplex.imag = staticTemporaryComplex.real * pointerInputComplex[m].imag + staticTemporaryComplex.imag * pointerInputComplex[m].real;
+      inputComplex[    m    ].real = pointerTemporaryComplex[m].real + staticInputComplex.real;
+      inputComplex[    m    ].imag = pointerTemporaryComplex[m].imag + staticInputComplex.imag;
+      inputComplex[m + n / 2].real = pointerTemporaryComplex[m].real - staticInputComplex.real;
+      inputComplex[m + n / 2].imag = pointerTemporaryComplex[m].imag - staticInputComplex.imag;
+    }
+
+  return;
+}
+
+
+void func_CumulativeSums(double *x, double *y, double xb, int N){
+	int i;
+    for(i = 0; i < N; i++){
+    	if(i == 0) y[i] = x[i] - xb;
+    	else y[i] = y[i - 1] + (x[i] - xb);
+    }
 }

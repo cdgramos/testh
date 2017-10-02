@@ -16,6 +16,18 @@
     <enumvalue id="est.h::TestH_EBP" name="TestH_EBP" value="4">
       <brief>Embedded Branching Process.</brief>
     </enumvalue>
+    <enumvalue id="est.h::TestH_HEAF" name="TestH_HEAF" value="5">
+      <brief>Hurst Exponent by Autocorrelation Function.</brief>
+    </enumvalue>
+    <enumvalue id="est.h::TestH_HIG" name="TestH_HIG" value="6">
+      <brief>Higuchi.</brief>
+    </enumvalue>
+    <enumvalue id="est.h::TestH_DFA" name="TestH_DFA" value="7">
+      <brief>Detrended Fluctuation Analysis.</brief>
+    </enumvalue>
+    <enumvalue id="est.h::TestH_PER" name="TestH_PER" value="8">
+      <brief>Periodogram</brief>
+    </enumvalue>
   </enum>
   <typedef id="est.h::est" name="est">
     <type name="TestHEstimator" ref="est.h#est.h::TestHEstimator" />
@@ -26,7 +38,7 @@
 </doc>
     <return>
       <doc>the hurst parameter for a given process.</doc>
-      <type builtin="yes" name="void" />
+      <type builtin="yes" name="double" />
     </return>
     <argument id="est_AbsoluteMomentsTime::pr" name="pr">
       <doc>pointer to a given process.</doc>
@@ -37,13 +49,39 @@
       <type builtin="yes" name="int" />
     </argument>
   </function>
+  <function id="est_AutocorrelationFunction" name="est_AutocorrelationFunction">
+    <brief> est_AutocorrelationFunction Function.</brief>
+    <doc>est_AutocorrelationFunction implements the Hurst Exponent by Autocorrelation Function (HEAF) algorithm, and for a given process it returns the computed hurst parameter.
+</doc>
+    <return>
+      <doc>the hurst parameter for a given process.</doc>
+      <type builtin="yes" name="double" />
+    </return>
+    <argument id="est_AutocorrelationFunction::pr" name="pr">
+      <doc>pointer to a given process.</doc>
+      <type name="proc_Process" qualifier="*" ref="proc.h::proc_Process#proc.h::proc_Process" />
+    </argument>
+  </function>
+  <function id="est_DetrendedFluctuationAnalysis" name="est_DetrendedFluctuationAnalysis">
+    <brief> est_DetrendedFluctuationAnalysis Function.</brief>
+    <doc>est_DetrendedFluctuationAnalysis implements the Detrented Fluctuation Analysis(DFA) algorithm, and for a given process it returns the computed hurst parameter.
+</doc>
+    <return>
+      <doc>the hurst parameter for a given process.</doc>
+      <type builtin="yes" name="double" />
+    </return>
+    <argument id="est_DetrendedFluctuationAnalysis::pr" name="pr">
+      <doc>pointer to a given process.</doc>
+      <type name="proc_Process" qualifier="*" ref="proc.h::proc_Process#proc.h::proc_Process" />
+    </argument>
+  </function>
   <function id="est_EmbeddedBranchingProcess" name="est_EmbeddedBranchingProcess">
     <brief> est_EmbeddedBranchingProcess Function.</brief>
     <doc>est_EmbeddedBranchingProcess implements the Embedded Branching Process (EBP) algorithm, and for a given process it returns the computed hurst parameter.
 </doc>
     <return>
       <doc>the hurst parameter for a given process.</doc>
-      <type builtin="yes" name="void" />
+      <type builtin="yes" name="double" />
     </return>
     <argument id="est_EmbeddedBranchingProcess::pr" name="pr">
       <doc>is a pointer to a given process.</doc>
@@ -52,6 +90,32 @@
     <argument id="est_EmbeddedBranchingProcess::K" name="K">
       <doc>maximum number of crossing levels.</doc>
       <type builtin="yes" name="int" />
+    </argument>
+  </function>
+  <function id="est_Higuchi" name="est_Higuchi">
+    <brief> est_Higuchi Function.</brief>
+    <doc>est_Higuchi implements the Higuchi algorithm, and for a given process it returns the computed hurst parameter.
+</doc>
+    <return>
+      <doc>the hurst parameter for a given process.</doc>
+      <type builtin="yes" name="double" />
+    </return>
+    <argument id="est_Higuchi::pr" name="pr">
+      <doc>pointer to a given process.</doc>
+      <type name="proc_Process" qualifier="*" ref="proc.h::proc_Process#proc.h::proc_Process" />
+    </argument>
+  </function>
+  <function id="est_Periodogram" name="est_Periodogram">
+    <brief> est_Periodogram Function.</brief>
+    <doc>est_Periodogram implements the Periodogram algorithm, and for a given process it returns the computed hurst parameter.
+</doc>
+    <return>
+      <doc>the hurst parameter for a given process.</doc>
+      <type builtin="yes" name="double" />
+    </return>
+    <argument id="est_Periodogram::pr" name="pr">
+      <doc>pointer to a given process.</doc>
+      <type name="proc_Process" qualifier="*" ref="proc.h::proc_Process#proc.h::proc_Process" />
     </argument>
   </function>
   <function id="est_RescaledRangeStatistics" name="est_RescaledRangeStatistics">
