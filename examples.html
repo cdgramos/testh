@@ -83,6 +83,40 @@
       <h1>
 <a id="the-library" class="anchor" href="#the-library" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Examples</h1>
 
+Usage example for estimating the self-similarity of a time series generated with the Hosking method using the Rescaled Range Statistics.
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #557799">#include &quot;proc.h&quot;</span>
+<span style="color: #557799">#include &quot;gen.h&quot;</span>
+<span style="color: #557799">#include &quot;est.h&quot;</span>
+<span style="color: #557799">#include &quot;dist.h&quot;</span>
+<span style="color: #557799">#include &quot;stat.h&quot;</span>
+<span style="color: #557799">#include &quot;rng.h&quot;</span>
+<span style="color: #557799">#include &quot;io.h&quot;</span>
+<span style="color: #557799">#include &quot;util.h&quot;</span>
+<span style="color: #557799">#include &quot;batt.h&quot;</span>
+<span style="color: #557799">#include &quot;sim.h&quot;</span>
+
+<span style="color: #557799">#include &lt;stdio.h&gt;</span>
+<span style="color: #557799">#include &lt;stdlib.h&gt;</span>
+<span style="color: #557799">#include &lt;math.h&gt;</span>
+
+<span style="color: #557799">#define N   pow(2,15)</span>
+<span style="color: #557799">#define H   (double) 0.25</span>
+
+<span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">main</span> (<span style="color: #333399; font-weight: bold">int</span> argc, <span style="color: #333399; font-weight: bold">char</span> <span style="color: #333333">*</span>argv[]) {
+
+    proc_Process <span style="color: #333333">*</span>pr <span style="color: #333333">=</span> gen_Hosking (N, H, TestH_fBm);
+
+    proc_ScalesConfig <span style="color: #333333">*</span>conf <span style="color: #333333">=</span> proc_CreateScalesConfig (TestH_POW, <span style="color: #0000DD; font-weight: bold">7</span>, <span style="color: #0000DD; font-weight: bold">11</span>, <span style="color: #0000DD; font-weight: bold">2</span>);
+
+    proc_CreateScales (pr, conf);
+
+    est_RescaledRangeStatistics (pr);
+
+    proc_DeleteProcess (pr);
+
+    <span style="color: #008800; font-weight: bold">return</span> <span style="color: #0000DD; font-weight: bold">1</span>;
+}
+</pre></div>
 
 
 

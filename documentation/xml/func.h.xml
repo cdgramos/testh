@@ -1,6 +1,27 @@
 <?xml version='1.0' encoding='utf-8'?>
 <category id="func.h" name="func.h" xmlns="http://jessevdk.github.com/cldoc/1.0">
   <brief>func.h provides mathematical functions.</brief>
+  <struct name="func_complexNumber" ref="func.h::func_complexNumber#func.h::func_complexNumber">
+    <brief> func_complexNumber Structure.</brief>
+  </struct>
+  <function id="func_CumulativeSums" name="func_CumulativeSums">
+    <brief> func_CumulativeSums Function.</brief>
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="func_CumulativeSums::x" name="x">
+      <type builtin="yes" name="double" qualifier="*" />
+    </argument>
+    <argument id="func_CumulativeSums::y" name="y">
+      <type builtin="yes" name="double" qualifier="*" />
+    </argument>
+    <argument id="func_CumulativeSums::xb" name="xb">
+      <type builtin="yes" name="double" />
+    </argument>
+    <argument id="func_CumulativeSums::N" name="N">
+      <type builtin="yes" name="int" />
+    </argument>
+  </function>
   <function id="func_gammq" name="func_gammq">
     <brief> func_gammq Function.</brief>
     <doc>func_gammq function calculates the complement of the incomplete gamma function.

@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<struct id="func.h::func_complexNumber" name="func_complexNumber" typedef="yes" xmlns="http://jessevdk.github.com/cldoc/1.0">
+  <brief> func_complexNumber Structure.</brief>
+  <doc>func_complexNumber defines a complex number.
+</doc>
+  <field id="func.h::func_complexNumber::real" name="real">
+    <brief>real is the real part.</brief>
+    <type builtin="yes" name="double" />
+  </field>
+  <field id="func.h::func_complexNumber::imag" name="imag">
+    <brief>imag is the imaginary part.</brief>
+    <type builtin="yes" name="double" />
+  </field>
+  <function id="func_FastFourierTransform" name="func_FastFourierTransform">
+    <brief> func_FastFourierTransform Function.</brief>
+    <doc>func_FastFourierTransform Applies the Fast Fourier Transform (FFT) to the array inputComplex, an empty array, temporaryComplex should also be passed as this is a recursive algorithm.
+The value is overwritten on inputComplex memory.</doc>
+    <return>
+      <type builtin="yes" name="void" />
+    </return>
+    <argument id="func_FastFourierTransform::inputComplex" name="inputComplex">
+      <doc>array of complex numbers.</doc>
+      <type name="func_complexNumber" qualifier="*" ref="func.h::func_complexNumber#func.h::func_complexNumber" />
+    </argument>
+    <argument id="func_FastFourierTransform::n" name="n">
+      <doc>lenth of the arrays.</doc>
+      <type builtin="yes" name="int" />
+    </argument>
+    <argument id="func_FastFourierTransform::temporaryComplex" name="temporaryComplex">
+      <doc>array of complex numbers.</doc>
+      <type name="func_complexNumber" qualifier="*" ref="func.h::func_complexNumber#func.h::func_complexNumber" />
+    </argument>
+  </function>
+</struct>

@@ -50,4 +50,33 @@
       <type builtin="yes" name="int" />
     </argument>
   </function>
+  <function id="reg_LeastSquareMeansLimited" name="reg_LeastSquareMeansLimited">
+    <brief> reg_LeastSquareMeansLimited Function.</brief>
+    <doc>reg_LeastSquareMeansLimited calculates the overall solution that minimizes the sum of the squares of the errors, this functions can be defined to operate over a specific range of values [low, top].
+</doc>
+    <return>
+      <doc>returns the linear regression fitted to points between [low, top].</doc>
+      <type name="reg_Linear" ref="reg.h::reg_Linear#reg.h::reg_Linear" />
+    </return>
+    <argument id="reg_LeastSquareMeansLimited::x" name="x">
+      <doc>are the values for the x-axis.</doc>
+      <type builtin="yes" name="double" qualifier="*" />
+    </argument>
+    <argument id="reg_LeastSquareMeansLimited::y" name="y">
+      <doc>are the values for the y-axis.</doc>
+      <type builtin="yes" name="double" qualifier="*" />
+    </argument>
+    <argument id="reg_LeastSquareMeansLimited::low" name="low">
+      <doc>is the lower boundary of the values to be computed.</doc>
+      <type builtin="yes" name="int" />
+    </argument>
+    <argument id="reg_LeastSquareMeansLimited::top" name="top">
+      <doc>is the top boundary of the values to be computed.</doc>
+      <type builtin="yes" name="int" />
+    </argument>
+    <argument id="reg_LeastSquareMeansLimited::print" name="print">
+      <doc>accept the values YES or NO to print the function result.</doc>
+      <type builtin="yes" name="int" />
+    </argument>
+  </function>
 </category>
