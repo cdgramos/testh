@@ -11,9 +11,9 @@
 Below is a minimal working example showing a *fractional Brownian motion* (fBm) process being generated with a pre-defined target Hurst parameter, which is then transformed to a *fractional Gaussian noise* (fGn) process. Afterwards, the aggregate processes that are needed by the procedure to estimate the Hurst parameter are computed and finally the Variance Time (VT) method is called upon.
 
 ```
-#include "process.h"
-#include "generators.h"
-#include "estimators.h"
+#include "proc.h"
+#include "gen.h"
+#include "est.h"
 #include "io.h"
 
 // fBm-SGA
