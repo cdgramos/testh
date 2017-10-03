@@ -83,17 +83,44 @@
       <h1>
 <a id="the-library" class="anchor" href="#the-library" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Examples</h1>
 
-Usage example for estimating the self-similarity of a time series generated with the Hosking method using the Rescaled Range Statistics.
+Working example showing a fractional Brownian motion (fBm) process being generated with a pre-defined target Hurst parameter, which is then transformed to a fractional Gaussian noise (fGn) process. Afterwards, the aggregate processes that are needed by the procedure to estimate the Hurst parameter are computed and finally the Variance Time (VT) method is called upon.
+
 <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #557799">#include &quot;proc.h&quot;</span>
 <span style="color: #557799">#include &quot;gen.h&quot;</span>
 <span style="color: #557799">#include &quot;est.h&quot;</span>
-<span style="color: #557799">#include &quot;dist.h&quot;</span>
-<span style="color: #557799">#include &quot;stat.h&quot;</span>
-<span style="color: #557799">#include &quot;rng.h&quot;</span>
 <span style="color: #557799">#include &quot;io.h&quot;</span>
-<span style="color: #557799">#include &quot;util.h&quot;</span>
-<span style="color: #557799">#include &quot;batt.h&quot;</span>
-<span style="color: #557799">#include &quot;sim.h&quot;</span>
+
+<span style="color: #888888">// fBm-SGA</span>
+<span style="color: #557799">#define N   100000</span>
+<span style="color: #557799">#define H   (double) 0.80</span>
+<span style="color: #557799">#define S   16</span>
+
+<span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">main</span> (<span style="color: #333399; font-weight: bold">void</span>) {
+  TestHVerbosity <span style="color: #333333">=</span> TestH_HIGH;
+
+  proc_Process <span style="color: #333333">*</span>proc <span style="color: #333333">=</span> gen_fBmSequentialGenerationAlgorithm (N, H, S, TestH_fBm);
+  proc_FractionalGaussianNoise (proc);
+  
+  proc_ScalesConfig <span style="color: #333333">*</span>conf <span style="color: #333333">=</span> proc_CreateScalesConfig (TestH_POW, <span style="color: #0000DD; font-weight: bold">7</span>, <span style="color: #0000DD; font-weight: bold">11</span>, <span style="color: #0000DD; font-weight: bold">2</span>);
+  proc_CreateScales (proc, conf);
+  proc_PrintProcess (proc);
+  
+  est_VarianceTime (proc);
+  
+  proc_DeleteProcess (proc);
+  io_PrintDone ();
+  <span style="color: #008800; font-weight: bold">return</span> EXIT_SUCCESS;
+}
+</pre></div>
+
+</br></br>
+
+Usage example for estimating the self-similarity of a time series generated with the Hosking method for a given H value and N length, using the Rescaled Range Statistics (R/S).
+</br>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #557799">#include &quot;proc.h&quot;</span>
+<span style="color: #557799">#include &quot;gen.h&quot;</span>
+<span style="color: #557799">#include &quot;est.h&quot;</span>
+<span style="color: #557799">#include &quot;io.h&quot;</span>
 
 <span style="color: #557799">#include &lt;stdio.h&gt;</span>
 <span style="color: #557799">#include &lt;stdlib.h&gt;</span>
