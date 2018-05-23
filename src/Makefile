@@ -20,8 +20,12 @@ LIBS 	= -lm
 _DEPS = func.h reg.h dist.h est.h gen.h stat.h rng.h proc.h util.h io.h batt.h sim.h
 DEPS  = $(patsubst %,$(IDIR)/%,$(_DEPS))
 
-_OBJ = func.o reg.o dist.o est.o gen.o stat.o util.o io.o rng.o proc.o batt.o sim.o test.o 
+_OBJ = func.o reg.o dist.o est.o gen.o stat.o util.o io.o rng.o proc.o batt.o sim.o test.o
 OBJ  = $(patsubst %,$(ODIR)/%,$(_OBJ))
+
+_OBJ_H = func.o reg.o dist.o est.o gen.o stat.o util.o io.o rng.o proc.o batt.o sim.o testH.o
+OBJ_H  = $(patsubst %,$(ODIR)/%,$(_OBJ_H))
+
 
 
 $(ODIR)/%.o: %.c $(DEPS)
@@ -29,6 +33,10 @@ $(ODIR)/%.o: %.c $(DEPS)
 
 $(EXEC): $(OBJ)
 	$(CC) -g -Wall -o $@ $^ $(CFLAGS) $(LIBS)
+
+testH: $(OBJ_H)
+	$(CC) -g -Wall -o ../bin/testH $^ $(CFLAGS) $(LIBS)
+
 
 .PHONY: clean
 
@@ -38,6 +46,7 @@ run:
 clean:
 	rm -f *~ $(ODIR)/*.o $(IDIR)/*~ 
 	rm -f $(EXEC)
+	rm -f $(EXECH)
 
 # check discussions below for input variables to make
 # http://stackoverflow.com/questions/2826029/passing-additional-variables-from-command-line-to-make
